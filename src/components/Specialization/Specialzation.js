@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-export default function Specialzation() {
+export default function Specialization() {
   return (
-    <h1>Specialzation</h1>
-  )
+    <h1>Specialization</h1>
+  );
 }

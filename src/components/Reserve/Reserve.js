@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export default function Reserve() {
   return (
-    <h1>Reserve</h1>
-  )
+    <div>
+        <h1>Reserve</h1>
+    </div> 
+  );
 }

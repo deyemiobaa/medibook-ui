@@ -17,7 +17,7 @@ export const incrementAsync = createAsyncThunk(
     const response = await fetchCount(amount);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
-  }
+  },
 );
 
 export const counterSlice = createSlice({
@@ -49,7 +49,7 @@ export const counterSlice = createSlice({
     [incrementAsync.fulfilled]: (state, action) => {
       state.status = 'idle';
       state.value += action.payload;
-    }
+    },
   },
 });
 

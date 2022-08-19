@@ -1,5 +1,14 @@
 /* stylelint-disable */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap');
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --secondary-color: rgba(141, 197, 10, 0.788);
+}
+
+* {
+  font-family: var(--font-family);
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from "../../assests/logo.png"
+import logo from '../../assests/logo.png';
 
 export default function Navigation() {
   return (
-    <div className="navigation w-[230px] bg-gray-300  max-h-full flex flex-col max-h-full ">
+    <div className="navigation w-[230px] bg-gray-300 flex flex-col max-h-full ">
       <div className="logo w-[70%] self-center">
         <img src={logo} className="logo rounded-full" alt="logo" />
       </div>

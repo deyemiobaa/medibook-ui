@@ -31,12 +31,14 @@ const Home = () => (
                 <h3 className="text-gray-500 mb-3">Heart Specialist</h3>
                 <p className="mb-4">rabia.naeem@gmail.com</p>
                 <span className="inline-flex">
-                  <button
-                    type="button"
-                    className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full"
-                  >
-                    <a href="./DoctorDetails/DoctorDetailss">View Doctor</a>
-                  </button>
+                  <Link exact to="../DoctorDetails">
+                    <button
+                      type="button"
+                      className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full"
+                    >
+                      View Doctor
+                    </button>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -51,7 +53,6 @@ const Home = () => (
               <div className="w-full">
                 <h2 className="title-font font-bold text-lg text-gray-900">
                   Rabia Naeem
-                  {' '}
                 </h2>
                 <h3 className="text-gray-500 mb-3">Heart Specialist</h3>
                 <p className="mb-4">rabia.naeem@gmail.com</p>
@@ -82,12 +83,14 @@ const Home = () => (
                 <h3 className="text-gray-500 mb-3">Heart Specialist</h3>
                 <p className="mb-4">rabia.naeem@gmail.com</p>
                 <span className="inline-flex">
-                  <button
-                    type="button"
-                    className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full"
-                  >
-                    View Doctor
-                  </button>
+                  <Link exact to="../DoctorDetails">
+                    <button
+                      type="button"
+                      className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full"
+                    >
+                      View Doctor
+                    </button>
+                  </Link>
                 </span>
               </div>
             </div>

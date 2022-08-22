@@ -8,7 +8,6 @@ import Navigation from './components/Navigation/Navigation';
 function App() {
   return (
     <>
-      <Navigation />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/Specialization" exact element={<Specialization />} />

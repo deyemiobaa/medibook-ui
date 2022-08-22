@@ -10,8 +10,8 @@ export default function Navigation() {
       </div>
       <div className="navLinks flex flex-col mt-44 pl-[15px]">
         <NavLink exact to="/" activeClassName="nav-active" className="link-el hover:bg-[#97C02C] hover:text-[#fff] ease-in duration-300 text-lg font-medium mb-2 p-[15px]">Home</NavLink>
-        <NavLink exact to="/Specialization" activeClassName="nav-active" className="link-el hover:bg-[#97C02C] hover:text-[#fff] ease-in duration-300 text-lg font-medium mb-2 p-[15px] whitespace-nowrap">My Reservations</NavLink>
-        <NavLink exact to="/SpecialCases" activeClassName="nav-active" className="link-el hover:bg-[#97C02C] hover:text-[#fff] ease-in duration-300 text-lg font-medium mb-2 p-[15px] whitespace-nowrap">Book Appointment</NavLink>
+        <NavLink exact to="/MyReservations" activeClassName="nav-active" className="link-el hover:bg-[#97C02C] hover:text-[#fff] ease-in duration-300 text-lg font-medium mb-2 p-[15px] whitespace-nowrap">My Reservations</NavLink>
+        <NavLink exact to="/BookAppointment" activeClassName="nav-active" className="link-el hover:bg-[#97C02C] hover:text-[#fff] ease-in duration-300 text-lg font-medium mb-2 p-[15px] whitespace-nowrap">Book Appointment</NavLink>
       </div>
     </div>
   );

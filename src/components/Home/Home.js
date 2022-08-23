@@ -3,7 +3,7 @@ import doctorImg from '../../assests/doctor1.jpg';
 import Navigation from '../Navigation/Navigation';
 
 const Home = () => (
-  <div className="flex">
+  <div className="sm:flex">
     <Navigation />
     <section className="text-gray-600 body-font overflow-scroll">
       <div className="container px-5 py-24 mx-auto">

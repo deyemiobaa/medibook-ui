@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import doctorImg from '../../assests/doctor1.jpg';
+import barImg from '../../assests/circle-bar.png';
 
 const DoctorDetails = () => (
   <div className="flex">
@@ -34,13 +35,13 @@ const DoctorDetails = () => (
           </h1>
           <p className="mb-8 leading-relaxed text-gray-700">rabia.naeem@gmail.com</p>
 
-          <div className="grid grid-cols-6 gap-y-3 rounded">
-            <div className="col-span-5 bg-gray-300 p-3 font-bold">City :</div>
-            <div className=" bg-gray-300 py-3">lahore</div>
-            <div className="col-start-1 col-end-6 font-bold p-3">State :</div>
-            <div>Punjab</div>
-            <div className="col-span-4 bg-gray-300 font-bold p-3">Country :</div>
-            <div className="col-span-2 bg-gray-300 px-10 py-3">Pakistan</div>
+          <div className="grid grid-cols-2 xl:grid-cols-6 gap-y-3">
+            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 p-3 font-bold">City :</div>
+            <div className=" bg-gray-300 p-3">lahore</div>
+            <div className=" xl:col-start-1 xl:col-end-5 font-bold p-3">State :</div>
+            <div className="p-3">Punjab</div>
+            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 font-bold p-3">Country:</div>
+            <div className=" bg-gray-300 p-3">Pakistan</div>
           </div>
           {/* <div>
             <ul>
@@ -58,6 +59,7 @@ const DoctorDetails = () => (
               </li>
             </ul>
           </div> */}
+          <img src={barImg} alt="circle-bar" className="w-25 h-56 p-5" />
         </div>
       </div>
     </section>

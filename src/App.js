@@ -5,15 +5,13 @@ import BookAppointment from './components/BookAppointment/BookAppointment';
 import MyReservations from './components/MyReservations/MyReservations';
 import DoctorDetails from './components/DoctorDetails/DoctorDetails';
 
-// import Navigation from './components/Navigation/Navigation';
-
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/BookAppointment" exact element={<BookAppointment />} />
-        <Route path="/MyReservations" exact element={<MyReservations />} />
+        <Route path="/my-reservations" exact element={<MyReservations />} />
         <Route path="/DoctorDetails" exact element={<DoctorDetails />} />
       </Routes>
     </>

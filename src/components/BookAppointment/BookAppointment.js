@@ -9,19 +9,25 @@ const BookAppointment = () => (
         <div className="container px-5 py-24 mx-auto">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl text-center title-font text-black mb-4 font-bold">
-              Doctors Book Appointment
+              Book Appointment
             </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Kindly first Select the doctor.
-            </p>
           </div>
           <div className="lg:w-1/2 sm:mx-auto sm:mb-2">
             <div className="p-2">
               <form className="flex flex-col justify-center  bg-lime-800 rounded">
                 <h1 className="text-lg font-medium text-white p-3">
-                  Select a Specific Day
+                  Select a Doctor
                 </h1>
-                <input type="date" className="p-2 my-5 mx-3 rounded" />
+                <select className="p-2 mx-3 rounded">
+                  <option value="actual value 0">Select Doctor</option>
+                  <option value="actual value 1">Rabia Naeem</option>
+                  <option value="actual value 2">Doctor 2</option>
+                  <option value="actual value 3">Doctor 3</option>
+                </select>
+                <h1 className="text-lg font-medium text-white p-3">
+                  Select a Specific Day & Time
+                </h1>
+                <input type="date" className="p-2 mx-3 rounded" />
                 <input type="time" className="p-2 m-3 rounded" />
                 <button
                   type="submit"

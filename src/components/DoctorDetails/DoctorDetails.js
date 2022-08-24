@@ -31,17 +31,29 @@ const DoctorDetails = () => (
           <h1 className="font-bold sm:text-xl text-xl mb-4 text-gray-900">
             Rabia Naeem
           </h1>
-          <p className="mb-8 leading-relaxed text-gray-700">rabia.naeem@gmail.com</p>
+          <p className="mb-8 leading-relaxed text-gray-700">
+            rabia.naeem@gmail.com
+          </p>
 
           <div className="grid grid-cols-2 xl:grid-cols-6 gap-y-3">
-            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 p-3 font-bold">City :</div>
+            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 p-3 font-bold">
+              City :
+            </div>
             <div className=" bg-gray-300 p-3">lahore</div>
-            <div className=" xl:col-start-1 xl:col-end-5 font-bold p-3">State :</div>
+            <div className=" xl:col-start-1 xl:col-end-5 font-bold p-3">
+              State :
+            </div>
             <div className="p-3">Punjab</div>
-            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 font-bold p-3">Country:</div>
+            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 font-bold p-3">
+              Country:
+            </div>
             <div className=" bg-gray-300 p-3">Pakistan</div>
           </div>
-          <img src={barImg} alt="circle-bar" className="w-25 h-56 p-5 rounded-full" />
+          <img
+            src={barImg}
+            alt="circle-bar"
+            className="w-25 h-56 p-5 rounded-full"
+          />
         </div>
       </div>
     </section>

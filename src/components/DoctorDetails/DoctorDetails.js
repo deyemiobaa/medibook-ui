@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import doctorImg from '../../assests/doctor1.jpg';
-import barImg from '../../assests/circle-bar.png';
 
 const DoctorDetails = () => (
   <div className="flex">
@@ -49,11 +48,6 @@ const DoctorDetails = () => (
             </div>
             <div className=" bg-gray-300 p-3">Pakistan</div>
           </div>
-          <img
-            src={barImg}
-            alt="circle-bar"
-            className="w-25 h-56 p-5 rounded-full"
-          />
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ const BookAppointment = () => (
           <form className="flex flex-col justify-center">
             <input type="date" className="p-2 m-2" />
             <input type="time" className="p-2 m-2" />
-            <button type="submit" className="p-3 my-5 w-[160px] mx-auto rounded-full bg-white text-lime-500">Book Now</button>
+            <button type="submit" className="p-3 my-5 w-[160px] mx-auto rounded-full bg-white text-lime-500 hover:bg-lime-700 hover:text-white">Book Now</button>
           </form>
         </div>
       </div>

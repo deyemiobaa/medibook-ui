@@ -10,7 +10,7 @@ const DoctorDetails = () => (
   <div className="flex">
     <Navigation />
     <section className="body-font w-full h-screen">
-      <h1 className="flex justify-center title-font sm:text-4xl text-3xl font-bold text-gray-900 mt-5">
+      <h1 className="flex justify-center title-font sm:text-4xl text-3xl font-bold text-gray-900 mt-5 underline decoration-lime-400">
         Doctor Profile
       </h1>
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col">
@@ -43,23 +43,7 @@ const DoctorDetails = () => (
             <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 font-bold p-3">Country:</div>
             <div className=" bg-gray-300 p-3">Pakistan</div>
           </div>
-          {/* <div>
-            <ul>
-              <li className="flex justify-between bg-gray-300 p-3 rounded">
-                <p className="font-bold ">City:</p>
-                <p>Lahore</p>
-              </li>
-              <li className="flex justify-between p-3">
-                <p className="font-bold">State:</p>
-                <p>Punjab</p>
-              </li>
-              <li className="flex justify-between bg-gray-300 p-3 rounded">
-                <p className="font-bold">Address:</p>
-                <p className="pl-10">Pakistan</p>
-              </li>
-            </ul>
-          </div> */}
-          <img src={barImg} alt="circle-bar" className="w-25 h-56 p-5" />
+          <img src={barImg} alt="circle-bar" className="w-25 h-56 p-5 rounded-full" />
         </div>
       </div>
     </section>

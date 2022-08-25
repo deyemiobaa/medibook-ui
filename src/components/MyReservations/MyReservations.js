@@ -27,11 +27,11 @@ export default function MyReservations() {
                   <span className="text-xl text-black"> Neurosurgeon</span>
                   {' '}
                   <br />
-                  aurianekibala@gmail.com
+                  jannetjackson@gmail.com
                 </div>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-300">
-                You are free to cancel this reservations only free months before the deadline
+                motif: continuous headaches and nausea
               </p>
               <div className="flex mb-4 text-sm font-medium">
                 <button type="button" className="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
@@ -56,14 +56,14 @@ export default function MyReservations() {
                 <div className="w-full flex-none text-sm font-medium text-gray-500 dark:text-gray-300 mt-2">
                   Speciality:
                   {' '}
-                  <span className="text-xl text-black"> Neurosurgeon</span>
+                  <span className="text-xl text-black">Therapist</span>
                   {' '}
                   <br />
                   aurianekibala@gmail.com
                 </div>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-300">
-                Free shipping on all continental US orders.
+                motif: depression and anxiety
               </p>
               <div className="flex mb-4 text-sm font-medium">
                 <button type="button" className="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">

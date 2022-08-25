@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../Navigation/Navigation';
 import doctorImg from '../../assests/doctor1.jpg';
-import doctorImg2 from '../../assests/'
+import doctorImg2 from '../../assests/doctor2.jpg';
 
 export default function MyReservations() {
   return (
@@ -25,6 +25,9 @@ export default function MyReservations() {
                   Speciality:
                   {' '}
                   <span className="text-xl text-black"> Neurosurgeon</span>
+                  {' '}
+                  <br />
+                  aurianekibala@gmail.com
                 </div>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-300">
@@ -40,12 +43,12 @@ export default function MyReservations() {
 
           <div className="flex m-20 sm:m-20 bg-white dark:bg-gray-800 rounded-lg shadow">
             <div className="flex-none w-24 md:w-48  relative">
-              <img src={doctorImg} alt="doctor" className="absolute rounded-lg inset-0 w-full h-full object-cover" />
+              <img src={doctorImg2} alt="doctor" className="absolute rounded-lg inset-0 w-full h-full object-cover" />
             </div>
             <form className="flex-auto p-6">
               <div className="flex flex-wrap">
                 <h1 className="flex-auto text-xl font-semibold dark:text-gray-50">
-                  Jannet Jackson
+                  Auriane Kibala
                 </h1>
                 <div className="text-xl font-semibold text-gray-500 dark:text-gray-300">
                   Date: 12.03.2022
@@ -54,6 +57,9 @@ export default function MyReservations() {
                   Speciality:
                   {' '}
                   <span className="text-xl text-black"> Neurosurgeon</span>
+                  {' '}
+                  <br />
+                  aurianekibala@gmail.com
                 </div>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-300">

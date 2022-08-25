@@ -3,15 +3,15 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assests/logo.png';
 
 export default function Navigation() {
-  let [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="navigation w-[100%]  sm:w-[25%] bg-gray-300 flex flex-col sm:max-h-full ">
       <div className="logo w-[20%] sm:w-[70%] p-[10px] sm:self-center">
         <img src={logo} className="logo rounded-full" alt="logo" />
       </div>
-      <div onClick={()=>setOpen(!open)} className="text-3xl absolute right-8 top-6 cursor-pointer sm:hidden">
-        <ion-icon name={open ? 'close-outline' : 'menu-outline'}></ion-icon>
+      <div onClick={()=> setOpen(!open)} className="text-3xl absolute right-8 top-6 cursor-pointer sm:hidden">
+        <ion-icon name={open ? 'close-outline' : 'menu-outline'} />
       </div>
 
       <div className={` navLinks flex flex-col  mt-44 items-center sm:items-start h-[10%] w-[100%] sm:pl-[15px] pb-12 pt-0 ${open ? 'top-20 opacity-100 bg-slate-600' : 'top-[-490px]'}`}>

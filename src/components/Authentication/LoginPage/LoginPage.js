@@ -3,9 +3,9 @@ import AutenticationNav from '../../AuthenticationNav/AutenticationNav';
 
 export default function LoginPage() {
   return (
-    <div className='flex'>
+    <div className='flex bg-[url("https://i.graphicmama.com/blog/wp-content/uploads/2021/04/22085104/free-medical-background-23.png")] bg-cover  bg-no-repeat'>
       <AutenticationNav />
-      <div className="w-full h-screen font-sans bg-cover bg-landscape">
+      <div className="w-full backdrop-blur-[8px] h-screen font-sans bg-cover bg-landscape">
         <div className="container flex items-center justify-center flex-1 h-full mx-auto">
           <div className="w-full max-w-lg">
             <div className="leading-loose">

@@ -9,7 +9,7 @@ export default function AutenticationNav() {
         <img src={logo} className="logo rounded-full" alt="logo" />
       </div>
 
-      <div className="navLinks flex flex-col  mt-44 items-center sm:items-start h-[10%] fixed w-[100%] sm:pl-[15px] pb-12 pt-0">
+      <div className="navLinks flex flex-col  mt-44 items-center sm:items-start h-[10%] w-[100%] sm:pl-[15px] pb-12 pt-0">
         <NavLink exact to="/" activeClassName="nav-active" className="link-el hover:bg-[#97C02C] text-xl hover:text-[#fff] ease-in duration-300 sm:text-[90%] font-medium mb-2 p-[15px]">Login</NavLink>
         <NavLink exact to="/Signup" activeClassName="nav-active" className="link-el hover:bg-[#97C02C] text-xl hover:text-[#fff] ease-in duration-300 sm:text-[90%] font-medium mb-2 p-[15px] whitespace-nowrap">Sign up</NavLink>
       </div>

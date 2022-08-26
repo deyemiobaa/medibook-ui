@@ -7,7 +7,7 @@ export default function MyReservations() {
   return (
     <div className="sm:flex">
       <Navigation />
-      <div className="w-full reservations-container ">
+      <div className="w-full w-[80%] reservations-container ">
         <div className="flex flex-col text-center w-full mt-40 sm:mt-0">
           <h1 className="text-2xl title-font mb-4 text-gray-900 font-black">
             Reservations

@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AutenticationNav from '../../AuthenticationNav/AutenticationNav';
+import SignUpPage from '../SignUpPage/SignUpPage';
 
 export default function LoginPage() {
   return (
@@ -29,9 +31,9 @@ export default function LoginPage() {
                   </button>
                 </div>
                 <div className="text-center">
-                  <a href="vid.com" className="right-0 inline-block text-sm font-light align-baseline text-500 hover:text-gray-800">
+                  <Link to={SignUpPage} className="right-0 inline-block text-sm font-light align-baseline text-500 hover:text-gray-800">
                     Create an account
-                  </a>
+                  </Link>
                 </div>
               </form>
             </div>

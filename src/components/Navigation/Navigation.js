@@ -6,7 +6,7 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="navigation mb-30 w-[100%] fixed sm:static sm:w-[20%]  bg-gray-300 flex flex-col sm:max-h-full ">
+    <div className="navigation mb-30 sm:w-[20%]  bg-gray-300 flex flex-col sm:max-h-full ">
       <div className="logo w-[20%] sm:w-[70%] p-[10px] sm:self-center">
         <img src={logo} className="logo rounded-full" alt="logo" />
       </div>

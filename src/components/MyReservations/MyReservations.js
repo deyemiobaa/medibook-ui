@@ -5,9 +5,9 @@ import doctorImg2 from '../../assests/doctor2.jpg';
 
 export default function MyReservations() {
   return (
-    <div className="flex">
+    <div className="sm:flex">
       <Navigation />
-      <div className="w-full reservations-container sm:w-[80%]">
+      <div className="w-full reservations-container ">
         <div className="flex flex-col text-center w-full mt-40 sm:mt-0">
           <h1 className="text-2xl title-font mb-4 text-gray-900 font-black">
             Reservations
@@ -20,7 +20,7 @@ export default function MyReservations() {
           <div className="flex-none w-24 md:w-48 relative">
             <img src={doctorImg} alt="doctor" className=" rounded-lg  w-full h-full object-cover" />
           </div>
-          <form className="flex-auto p-6">
+          <div className="flex-auto p-6">
             <div className="flex flex-wrap">
               <h1 className="flex-auto text-xl font-semibold dark:text-gray-50">
                 Jannet Jackson
@@ -45,14 +45,14 @@ export default function MyReservations() {
                 Meet Now
               </button>
             </div>
-          </form>
+          </div>
         </div>
 
         <div className="flex  m-[2%] sm:m-20 bg-white dark:bg-gray-800 rounded-lg shadow">
           <div className="flex-none w-24 md:w-48  relative">
             <img src={doctorImg2} alt="doctor" className="absolute rounded-lg inset-0 w-full h-full object-cover" />
           </div>
-          <form className="flex-auto p-6">
+          <div className="flex-auto p-6">
             <div className="flex flex-wrap">
               <h1 className="flex-auto text-xl font-semibold dark:text-gray-50">
                 Auriane Kibala
@@ -77,7 +77,7 @@ export default function MyReservations() {
                 Meet Now
               </button>
             </div>
-          </form>
+          </div>
         </div>
 
       </div>

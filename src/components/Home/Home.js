@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import doctorImg from '../../assests/doctor1.jpg';
 import Navigation from '../Navigation/Navigation';
 
@@ -30,9 +31,14 @@ const Home = () => (
                 <h3 className="text-gray-500 mb-3">Heart Specialist</h3>
                 <p className="mb-4">rabia.naeem@gmail.com</p>
                 <span className="inline-flex">
-                  <button type="button" className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full">
-                    View Doctor
-                  </button>
+                  <Link exact to="../doctor-details">
+                    <button
+                      type="button"
+                      className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full"
+                    >
+                      View Doctor
+                    </button>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -51,9 +57,14 @@ const Home = () => (
                 <h3 className="text-gray-500 mb-3">Heart Specialist</h3>
                 <p className="mb-4">rabia.naeem@gmail.com</p>
                 <span className="inline-flex">
-                  <button type="button" className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full">
-                    View Doctor
-                  </button>
+                  <Link exact to="../DoctorDetails">
+                    <button
+                      type="button"
+                      className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full"
+                    >
+                      View Doctor
+                    </button>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -72,16 +83,19 @@ const Home = () => (
                 <h3 className="text-gray-500 mb-3">Heart Specialist</h3>
                 <p className="mb-4">rabia.naeem@gmail.com</p>
                 <span className="inline-flex">
-                  <button type="button" className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full">
-                    View Doctor
-                  </button>
+                  <Link exact to="../DoctorDetails">
+                    <button
+                      type="button"
+                      className="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded-full"
+                    >
+                      View Doctor
+                    </button>
+                  </Link>
                 </span>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   </div>

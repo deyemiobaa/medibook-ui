@@ -4,7 +4,7 @@ import logo from '../../assests/logo.png';
 
 export default function AutenticationNav() {
   return (
-    <div className="navigation w-[100%] sm:w-[25%] bg-gray-300 flex flex-col sm:max-h-full ">
+    <div className=" hidden sm:block sm:w-[20%] bg-gray-300 flex flex-col sm:max-h-full ">
       <div className="logo w-[20%] sm:w-[70%] p-[10px] sm:self-center">
         <img src={logo} className="logo rounded-full" alt="logo" />
       </div>

@@ -17,13 +17,13 @@ export default function Navigation({ urls }) {
       <div className={`open ${open ? 'fixed mt-56 z-20 left-0 right-0' : 'hidden'}`}>
         <div className="flex flex-col pl-3 bg-white navLinks first:border-t last:border-b">
           {urls.map(({ path, name }) => (
-            <NavLink to={path} className="py-2 text-xl ease-in duration-300 sm:text-[90%] font-medium mb-2" key={name} style={{ background: 'white', color: 'black' }}>{name}</NavLink>
+            <NavLink to={path} className="py-2 mb-2 text-xl font-medium duration-300 ease-in sm:text-base" key={name} style={{ background: 'white', color: 'black' }}>{name}</NavLink>
           ))}
         </div>
       </div>
-      <div className="navLinks hidden sm:flex sm:flex-col mt-44 pl-[15px]">
+      <div className="hidden navLinks sm:flex sm:flex-col">
         {urls.map(({ path, name }) => (
-          <NavLink to={path} className="link-el hover:bg-[#97C02C] text-xl hover:text-[#fff] ease-in duration-300 sm:text-[90%] font-medium mb-2 p-[15px]" key={name}>{name}</NavLink>
+          <NavLink to={path} className="link-el hover:bg-lime-400 text-base hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-[15px]" key={name}>{name}</NavLink>
         ))}
       </div>
     </div>

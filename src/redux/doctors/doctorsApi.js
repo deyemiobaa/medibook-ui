@@ -1,4 +1,4 @@
-export const getDoctors = async (baseURL) => {
+const getDoctors = async (baseURL) => {
   const response = await fetch(`${baseURL}/doctors`,
     {
       method: 'GET',
@@ -9,3 +9,5 @@ export const getDoctors = async (baseURL) => {
   const result = await response.json();
   return result; // { message: '...', status: '...' }
 };
+
+export default getDoctors;

@@ -7,7 +7,7 @@ export default function Navigation({ urls }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="navigation sm:w-[20%] bg-white flex justify-between items-center sm:flex-col sm:border-r sm:border-r-gray-400 border-b border-b-gray-400 fixed top-0 left-0 sm:bottom-0 px-3 sm:justify-start">
+    <div className="navigation sm:w-[20%] bg-white flex justify-between items-center sm:flex-col sm:border-r sm:border-r-gray-400 border-b border-b-gray-400 fixed top-0 left-0 sm:bottom-0 px-3 sm:justify-start sm:px-0">
       <div className="logo w-[20%] sm:w-[70%] p-[10px] sm:self-center">
         <img src={logo} className="rounded-full logo" alt="logo" />
       </div>
@@ -21,9 +21,9 @@ export default function Navigation({ urls }) {
           ))}
         </div>
       </div>
-      <div className="hidden navLinks sm:flex sm:flex-col">
+      <div className="hidden w-full navLinks sm:flex sm:flex-col">
         {urls.map(({ path, name }) => (
-          <NavLink to={path} className="link-el hover:bg-lime-400 text-base hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-[15px]" key={name}>{name}</NavLink>
+          <NavLink to={path} className="link-el hover:bg-lime-400 text-base hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10" key={name}>{name}</NavLink>
         ))}
       </div>
     </div>

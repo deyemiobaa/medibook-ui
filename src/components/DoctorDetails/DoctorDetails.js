@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation';
 import doctorImg from '../../assests/doctor1.jpg';
 
 const DoctorDetails = () => (
   <div className="flex">
-    <Navigation />
-    <section className="body-font w-full h-screen">
-      <h1 className="flex justify-center title-font sm:text-4xl text-3xl font-bold text-gray-900 mt-5 underline decoration-lime-400">
+    <section className="w-full h-screen body-font">
+      <h1 className="flex justify-center mt-5 text-3xl font-bold text-gray-900 underline title-font sm:text-4xl decoration-lime-400">
         Doctor Profile
       </h1>
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col">
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <div className="container flex flex-col px-5 py-24 mx-auto md:flex-row">
+        <div className="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0">
           <img
             className="object-cover object-center rounded"
             alt="hero"
@@ -20,14 +18,14 @@ const DoctorDetails = () => (
           <Link exact to="/BookAppointment">
             <button
               type="submit"
-              className="bg-lime-400 rounded-full text-white my-3 font-bold hover:bg-lime-700 inline-flex border-0 py-2 px-6 focus:outline-none text-xs lg:text-lg"
+              className="inline-flex px-6 py-2 my-3 text-xs font-bold text-white border-0 rounded-full bg-lime-400 hover:bg-lime-700 focus:outline-none lg:text-lg"
             >
               Book Appointment
             </button>
           </Link>
         </div>
-        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1 className="font-bold sm:text-xl text-xl mb-4 text-gray-900">
+        <div className="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left">
+          <h1 className="mb-4 text-xl font-bold text-gray-900 sm:text-xl">
             Rabia Naeem
           </h1>
           <p className="mb-8 leading-relaxed text-gray-700">
@@ -35,18 +33,18 @@ const DoctorDetails = () => (
           </p>
 
           <div className="grid grid-cols-2 xl:grid-cols-6 gap-y-3">
-            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 p-3 font-bold">
+            <div className="p-3 font-bold bg-gray-300 xl:col-start-1 xl:col-end-5">
               City :
             </div>
-            <div className=" bg-gray-300 p-3">lahore</div>
-            <div className=" xl:col-start-1 xl:col-end-5 font-bold p-3">
+            <div className="p-3 bg-gray-300 ">lahore</div>
+            <div className="p-3 font-bold xl:col-start-1 xl:col-end-5">
               State :
             </div>
             <div className="p-3">Punjab</div>
-            <div className="xl:col-start-1 xl:col-end-5 bg-gray-300 font-bold p-3">
+            <div className="p-3 font-bold bg-gray-300 xl:col-start-1 xl:col-end-5">
               Country:
             </div>
-            <div className=" bg-gray-300 p-3">Pakistan</div>
+            <div className="p-3 bg-gray-300 ">Pakistan</div>
           </div>
         </div>
       </div>

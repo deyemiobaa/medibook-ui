@@ -34,11 +34,12 @@ export const usersSlice = createSlice({
       state.isLoading = true;
     },
     [signinAsync.fulfilled]: (state, action) => {
+      state.isLoading = false;
       const { token, role, name } = action.payload;
       storage.save({ token, role, name });
     },
     [signinAsync.rejected]: (state, action) => {
-      state.isError = true;
+      state.isLoading = false;
       state.message = action.payload.error;
     },
     [signupAsync.pending]: (state) => {

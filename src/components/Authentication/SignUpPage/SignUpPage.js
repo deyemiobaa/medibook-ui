@@ -39,7 +39,7 @@ export default function SignUpPage() {
     <div className="w-full px-5 py-24 text-gray-600 justify-self-center sm:w-4/5 bg-lime-400 sm:justify-self-end sm:py-16">
       <div className="max-w-sm m-auto bg-white bg-opacity-25 rounded shadow-xl">
         <form className="p-10" onSubmit={handleSubmit}>
-          <p className="mb-8 text-2xl font-light text-center text-blue-600 bg-red-600">
+          <p className="mb-8 text-2xl font-light text-center text-gray-700">
             Sign up
           </p>
           <div className="mb-2">
@@ -82,7 +82,7 @@ export default function SignUpPage() {
             <button
               disabled={
                 isLoading
-                && (values.password.length < 1 || values.confirmation !== values.password)
+                || (values.password.length < 1 || values.confirmation !== values.password)
               }
               type="submit"
               className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md disabled:opacity-50 bg-lime-800 focus:ring-lime-400 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 enabled:disabled:hover:bg-lime-500"

@@ -8,6 +8,7 @@ import SignUpPage from './components/Authentication/SignUpPage/SignUpPage';
 import Navigation from './components/Navigation/Navigation';
 import { authenticatedNav, unauthenticatedNav } from './assests/navigation';
 import storage from './app/localStorage';
+import 'toastify-js/src/toastify.css';
 
 function App() {
   if (storage.get('token')) {

@@ -73,7 +73,7 @@ export default function LoginPage() {
           </div>
         </form>
         <div className="py-5 text-center">
-          <Link to="/signup" className="text-base font-medium align-baseline hover:text-gray-800">
+          <Link to="/register" className="text-base font-medium align-baseline hover:text-gray-800">
             Create an account
           </Link>
         </div>

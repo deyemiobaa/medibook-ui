@@ -35,7 +35,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="w-full px-5 py-24 text-gray-600 justify-self-center sm:w-4/5 bg-lime-400 sm:justify-self-end sm:py-16">
+    <div className="w-full px-5 py-24 text-gray-600 justify-self-center sm:w-[85%] bg-lime-400 sm:justify-self-end sm:py-16">
       <div className="max-w-sm m-auto bg-white bg-opacity-25 rounded shadow-xl">
         <form className="p-10" onSubmit={handleSubmit}>
           <p className="mb-8 text-2xl font-light text-center text-blue-600">

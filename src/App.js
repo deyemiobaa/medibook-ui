@@ -8,7 +8,7 @@ import MyReservations from './components/MyReservations/MyReservations';
 import LoginPage from './components/Authentication/LoginPage/LoginPage';
 import SignUpPage from './components/Authentication/SignUpPage/SignUpPage';
 import Navigation from './components/Navigation/Navigation';
-import { authenticatedNav, unauthenticatedNav } from './assests/navigation';
+import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
 import 'toastify-js/src/toastify.css';
 

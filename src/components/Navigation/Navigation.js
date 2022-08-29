@@ -1,13 +1,68 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import logo from '../../assests/logo.png';
+import {
+  FaTwitter, FaGithub, FaInstagram, FaFacebook, FaReact, FaHeart, FaLinkedin,
+} from 'react-icons/fa';
+import { SiRubyonrails } from 'react-icons/si';
+import { BsPlus } from 'react-icons/bs'; import logo from '../../assets/logo.png';
 
 export default function Navigation({ urls }) {
   const [open, setOpen] = useState(false);
 
+  const icons = [
+    {
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com',
+      icon: <FaLinkedin />,
+    },
+    {
+      title: 'Twitter',
+      url: 'https://twitter.com',
+      icon: <FaTwitter />,
+    },
+    {
+      title: 'Github',
+      url: 'https://github.com/orgs/medi-book/repositories',
+      icon: <FaGithub />,
+    },
+    {
+      title: 'Instagram',
+      url: 'https://instagram.com',
+      icon: <FaInstagram />,
+    },
+    {
+      title: 'Facebook',
+      url: 'https://facebook.com',
+      icon: <FaFacebook />,
+    },
+  ];
+
+  const technologies = [
+    {
+      title: 'Built with Love',
+      icon: <FaHeart />,
+    },
+    {
+      title: 'Plus',
+      icon: <BsPlus />,
+    },
+    {
+      title: 'Built with React',
+      icon: <FaReact />,
+    },
+    {
+      title: 'Plus+',
+      icon: <BsPlus />,
+    },
+    {
+      title: 'Built with Rails',
+      icon: <SiRubyonrails />,
+    },
+  ];
+
   return (
-    <div className="navigation sm:w-[20%] bg-white flex justify-between items-center sm:flex-col sm:border-r sm:border-r-gray-400 border-b border-b-gray-400 fixed top-0 left-0 sm:bottom-0 px-3 sm:justify-start sm:px-0">
+    <div className="navigation sm:w-[15%] bg-white flex justify-between items-center sm:flex-col sm:border-r sm:border-r-gray-400 border-b border-b-gray-400 fixed top-0 left-0 sm:bottom-0 px-3 sm:pb-10 sm:px-0">
       <div className="logo w-[20%] sm:w-[70%] p-[10px] sm:self-center">
         <img src={logo} className="rounded-full logo" alt="logo" />
       </div>
@@ -25,6 +80,22 @@ export default function Navigation({ urls }) {
         {urls.map(({ path, name }) => (
           <NavLink to={path} className="link-el hover:bg-lime-400 text-base hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10" key={name}>{name}</NavLink>
         ))}
+      </div>
+      <div className="hidden sm:block">
+        <div className="flex gap-4 p-2">
+          {icons.map((icon) => (
+            <Link to={icon.url} key={icon.title} title={icon.title} className="text-sm font-medium">
+              {icon.icon}
+            </Link>
+          ))}
+        </div>
+        <div className="flex justify-center p-2">
+          {technologies.map((tech) => (
+            <div key={tech.title} title={tech.title} className="p-1 text-sm font-medium">
+              {tech.icon}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

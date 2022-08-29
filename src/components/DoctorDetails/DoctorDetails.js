@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import doctorImg from '../../assests/doctor1.jpg';
+import doctorImg from '../../assets/doctor1.jpg';
 
 const DoctorDetails = () => (
   <div className="flex">

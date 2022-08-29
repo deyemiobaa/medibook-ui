@@ -11,12 +11,12 @@ import Navigation from './components/Navigation/Navigation';
 import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
 import 'toastify-js/src/toastify.css';
+import AddItem from './components/AddItem/AddItem';
 
 function App() {
   const location = useLocation();
 
-  useEffect(() => {
-  }, [location]);
+  useEffect(() => {}, [location]);
 
   if (storage.get('token')) {
     return (
@@ -27,6 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/appointments" element={<MyReservations />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
+          <Route path="/add-item" element={<AddItem />} />
         </Routes>
       </div>
     );
@@ -38,6 +39,7 @@ function App() {
         <Route path="*" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<SignUpPage />} />
+        <Route path="/add-item" element={<AddItem />} />
       </Routes>
     </div>
   );

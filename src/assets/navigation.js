@@ -11,6 +11,10 @@ export const authenticatedNav = [
     name: 'Book Appointment',
     path: '/book-appointment',
   },
+  {
+    name: 'Add Item',
+    path: '/add-item',
+  },
 ];
 
 export const unauthenticatedNav = [
@@ -21,5 +25,9 @@ export const unauthenticatedNav = [
   {
     name: 'Sign up',
     path: '/register',
+  },
+  {
+    name: 'add item',
+    path: '/add-item',
   },
 ];

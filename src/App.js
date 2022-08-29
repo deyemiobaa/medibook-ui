@@ -12,6 +12,7 @@ import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
 import 'toastify-js/src/toastify.css';
 import AddItem from './components/AddItem/AddItem';
+import DeleteItem from './components/DeleteItem/DeleteItem';
 
 function App() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function App() {
           <Route path="/appointments" element={<MyReservations />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/add-item" element={<AddItem />} />
+          <Route path="/delete-item" element={<DeleteItem />} />
         </Routes>
       </div>
     );
@@ -40,6 +42,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<SignUpPage />} />
         <Route path="/add-item" element={<AddItem />} />
+        <Route path="/delete-item" element={<DeleteItem />} />
       </Routes>
     </div>
   );

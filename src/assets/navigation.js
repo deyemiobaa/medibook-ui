@@ -27,7 +27,11 @@ export const unauthenticatedNav = [
     path: '/register',
   },
   {
-    name: 'add item',
+    name: 'Add Item',
     path: '/add-item',
+  },
+  {
+    name: 'Delete Item',
+    path: '/delete-item',
   },
 ];

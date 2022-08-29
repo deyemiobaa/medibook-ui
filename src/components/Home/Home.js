@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import doctorData from '../../assets/data';
-import doctorImg from '../../assets/doctor1.jpg';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchDoctors } from '../../redux/doctors/doctorsSlice';
 
 const Home = () => {
-  const doctors = useSelector((state) => state.doctors);
-  console.log('docs', doctors);
+  const { doctors } = useSelector((state) => state.doctors);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchDoctors());
+  }, []);
+
   return (
     <section className="px-5 py-24 text-gray-600 sm:py-16 sm:w-[85%]">
       <div className="flex flex-col items-center w-full mb-20 text-center">
@@ -18,19 +21,19 @@ const Home = () => {
         </p>
       </div>
       <div className="flex flex-wrap m-4">
-        {doctorData.map((doctor) => (
+        {doctors.map((doctor) => (
           <div key={doctor.id} className="p-4 lg:w-1/3 md:w-1/2">
             <div className="flex flex-col items-center h-full text-center">
               <img
                 alt="team"
                 className="object-cover object-center mb-4 rounded-full"
-                src={doctorImg}
+                src={doctor.picture}
               />
               <div className="w-full">
                 <h2 className="text-lg font-bold text-gray-900 title-font">
                   {doctor.name}
                 </h2>
-                <h3 className="mb-3 text-gray-500">{doctor.speciality}</h3>
+                <h3 className="mb-3 text-gray-500">{doctor.specialization}</h3>
                 <p className="mb-4">{doctor.email}</p>
                 <span className="inline-flex">
                   <Link to="/doctor-details">

@@ -1,16 +1,18 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import getDoctors from './doctorsApi';
 
 const baseURL = process.env.REACT_APP_BASE_URL;
+
+export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
+  const doctors = await getDoctors(baseURL);
+  return doctors;
+});
 
 const initialState = {
   loading: false,
   doctors: [],
   error: '',
 };
-
-export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', () => axios.get(baseURL)
-  .then((res) => res.data));
 
 const doctorsSlice = createSlice({
   name: 'doctors',

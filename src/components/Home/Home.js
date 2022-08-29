@@ -5,8 +5,8 @@ import doctorData from '../../assets/data';
 import doctorImg from '../../assets/doctor1.jpg';
 
 const Home = () => {
-  const doctors = useSelector((state) => state);
-  console.log(doctors);
+  const doctors = useSelector((state) => state.doctors);
+  console.log('docs', doctors);
   return (
     <section className="px-5 py-24 text-gray-600 sm:py-16 sm:w-[85%]">
       <div className="flex flex-col items-center w-full mb-20 text-center">

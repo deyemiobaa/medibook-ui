@@ -1,14 +1,34 @@
-import { createSlice } from '@reduxjs/toolkit';
-import getDoctors from './doctorsApi';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const initialState = [];
+const baseURL = process.env.REACT_APP_BASE_URL;
 
-export const doctorsSlice = createSlice({
+const initialState = {
+  loading: false,
+  doctors: [],
+  error: '',
+};
+
+export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', () => axios.get(baseURL)
+  .then((res) => res.data));
+
+const doctorsSlice = createSlice({
   name: 'doctors',
   initialState,
-  reducers: {},
   extraReducers: {
-    [getDoctors.fulfilled]: (state = initialState) => state,
+    [fetchDoctors.pending]: (state) => {
+      state.loading = true;
+    },
+    [fetchDoctors.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.doctors = action.payload;
+      state.error = '';
+    },
+    [fetchDoctors.rejected]: (state, action) => {
+      state.loading = false;
+      state.doctors = [];
+      state.error = action.error.message;
+    },
   },
 });
 

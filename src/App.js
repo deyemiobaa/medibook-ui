@@ -15,9 +15,9 @@ import 'toastify-js/src/toastify.css';
 import AddItem from './components/AddItem/AddItem';
 import DeleteItem from './components/DeleteItem/DeleteItem';
 
-// const { id } = useParams();
-
 function App() {
+  const role = storage.get('role');
+
   const location = useLocation();
 
   useEffect(() => {}, [location]);
@@ -32,8 +32,12 @@ function App() {
           <Route path="/appointments" element={<MyReservations />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/doctor/details/:name" element={<DoctorDetails />} />
-          <Route path="/add-item" element={<AddItem />} />
-          <Route path="/delete-item" element={<DeleteItem />} />
+          {role === 'admin' && (
+          <>
+            <Route path="/add-item" element={<AddItem />} />
+            <Route path="/delete-item" element={<DeleteItem />} />
+          </>
+          ) }
         </Routes>
       </div>
     );

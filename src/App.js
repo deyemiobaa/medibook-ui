@@ -12,14 +12,15 @@ import DoctorDetails from './components/DoctorDetails/DoctorDetails';
 import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
 import 'toastify-js/src/toastify.css';
+import AddItem from './components/AddItem/AddItem';
+import DeleteItem from './components/DeleteItem/DeleteItem';
 
 // const { id } = useParams();
 
 function App() {
   const location = useLocation();
 
-  useEffect(() => {
-  }, [location]);
+  useEffect(() => {}, [location]);
 
   if (storage.get('token')) {
     return (
@@ -31,6 +32,8 @@ function App() {
           <Route path="/appointments" element={<MyReservations />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/doctor/details/:name" element={<DoctorDetails />} />
+          <Route path="/add-item" element={<AddItem />} />
+          <Route path="/delete-item" element={<DeleteItem />} />
         </Routes>
       </div>
     );
@@ -42,6 +45,8 @@ function App() {
         <Route path="*" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<SignUpPage />} />
+        <Route path="/add-item" element={<AddItem />} />
+        <Route path="/delete-item" element={<DeleteItem />} />
       </Routes>
     </div>
   );

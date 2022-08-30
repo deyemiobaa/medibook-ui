@@ -27,7 +27,7 @@ export default function MyReservations() {
   const convertToDate = (date) => moment(date).format('MMMM Do YYYY, [at] h:mm a');
 
   return (
-    <section className="w-full px-5 py-24 sm:w-[85%] sm:py-16 justify-self-center sm:justify-self-end">
+    <section className="w-full px-5 py-24 sm:w-[85%] sm:py-16 justify-self-center sm:justify-self-end min-h-screen">
       <div className="flex flex-col items-center w-full mb-10 text-center">
         <h1 className="mb-4 text-2xl font-black text-gray-900 title-font">
           Appointments

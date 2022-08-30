@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import Toastify from 'toastify-js';
+import { toast } from 'react-toastify';
 import { signinAsync } from '../../../redux/users/usersSlice';
-import useForm from '../useForm';
+import useForm from '../../useForm';
 
 export default function LoginPage() {
   const { values, handleChange } = useForm({
@@ -25,17 +25,12 @@ export default function LoginPage() {
         navigate('/', { replace: true });
         window.location.reload();
       }).catch(() => {
-        Toastify({
-          text: message,
-          style: {
-            background: 'rgb(220 38 38 / 1)',
-          },
-        }).showToast();
+        toast.error(message);
       });
   };
 
   return (
-    <div className="w-full px-5 py-24 text-gray-600 justify-self-center sm:w-[85%] bg-lime-400 sm:justify-self-end sm:py-16">
+    <div className="w-full px-5 py-24 text-gray-600 justify-self-center sm:w-[85%] bg-lime-400 sm:justify-self-end sm:py-16 min-h-screen">
       <div className="max-w-sm m-auto bg-white bg-opacity-25 rounded shadow-xl">
         <form className="p-10" onSubmit={handleSubmit}>
           <p className="mb-8 text-2xl font-light text-center text-blue-600">

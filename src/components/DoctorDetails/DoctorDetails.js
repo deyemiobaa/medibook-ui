@@ -15,7 +15,7 @@ const DoctorDetails = () => (
             alt="hero"
             src={doctorImg}
           />
-          <Link exact to="/BookAppointment">
+          <Link exact to="/book-appointment/doctor.id">
             <button
               type="submit"
               className="inline-flex px-6 py-2 my-3 text-xs font-bold text-white border-0 rounded-full bg-lime-400 hover:bg-lime-700 focus:outline-none lg:text-lg"

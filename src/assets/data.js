@@ -7,13 +7,13 @@ const doctorData = [
   },
   {
     id: 2,
-    name: 'Rabia Naeem',
+    name: 'Joe weller',
     email: 'rabia.naeem@gmail.com',
     speciality: 'Dentist',
   },
   {
     id: 3,
-    name: 'Rabia Naeem',
+    name: 'Kelly shaw',
     email: 'rabia.naeem@gmail.com',
     speciality: 'Dentist',
   },

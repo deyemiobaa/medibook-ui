@@ -8,9 +8,12 @@ import MyReservations from './components/MyReservations/MyReservations';
 import LoginPage from './components/Authentication/LoginPage/LoginPage';
 import SignUpPage from './components/Authentication/SignUpPage/SignUpPage';
 import Navigation from './components/Navigation/Navigation';
+import DoctorDetails from './components/DoctorDetails/DoctorDetails';
 import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
 import 'toastify-js/src/toastify.css';
+
+// const { id } = useParams();
 
 function App() {
   const location = useLocation();
@@ -27,6 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/appointments" element={<MyReservations />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
+          <Route path="/doctor/details/:name" element={<DoctorDetails />} />
         </Routes>
       </div>
     );

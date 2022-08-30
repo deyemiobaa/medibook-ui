@@ -36,7 +36,7 @@ const Home = () => {
                 <h3 className="mb-3 text-gray-500">{doctor.specialization}</h3>
                 <p className="mb-4">{doctor.email}</p>
                 <span className="inline-flex">
-                  <Link to="/doctor-details">
+                  <Link to={`/doctor/details/${doctor.name}`}>
                     <button
                       type="button"
                       className="px-4 py-2 font-bold text-white rounded-full bg-lime-400 hover:bg-lime-700"

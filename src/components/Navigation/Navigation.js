@@ -80,24 +80,24 @@ export default function Navigation({ urls }) {
       </div>
       <div className="hidden w-full navLinks sm:flex sm:flex-col">
         {role === 'admin' && (
-        <>
-          <NavLink
-            to="/add-item"
-            className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
+          <>
+            <NavLink
+              to="/doctors/new"
+              className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
            ease-in duration-300 font-medium mb-2 p-3 pl-10"
-          >
-            Add Item
+            >
+              Add Doctor
 
-          </NavLink>
-          <NavLink
-            to="delete-item"
-            className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
+            </NavLink>
+            <NavLink
+              to="doctors/delete"
+              className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
            ease-in duration-300 font-medium mb-2 p-3 pl-10"
-          >
-            Delete Item
+            >
+              Remove Doctor
 
-          </NavLink>
-        </>
+            </NavLink>
+          </>
         )}
         {urls.map(({ path, name }) => (
           <NavLink to={path} className="link-el hover:bg-lime-400 text-base hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10" key={name}>{name}</NavLink>

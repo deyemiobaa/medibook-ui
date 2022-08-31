@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { postDoctors } from '../../redux/doctors/doctorsSlice';
 import useForm from '../useForm';
 
-const AddItem = () => {
+const AddDoctor = () => {
   const dispatch = useDispatch();
   const { values, handleChange } = useForm({
     name: '',
@@ -33,7 +33,7 @@ const AddItem = () => {
                 name="name"
                 onChange={handleChange}
                 value={values.name}
-                className="flex-1 w-64 mx-16 px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
+                className="flex-1 w-64 px-4 py-2 mx-16 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
                 placeholder="Name"
               />
             </label>
@@ -59,7 +59,7 @@ const AddItem = () => {
                 name="hourly"
                 onChange={handleChange}
                 value={values.hourly}
-                className="flex-1 w-64 mx-4 px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
+                className="flex-1 w-64 px-4 py-2 mx-4 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
                 placeholder="Hours"
               />
             </label>
@@ -72,7 +72,7 @@ const AddItem = () => {
                 name="available"
                 onChange={handleChange}
                 value={values.available}
-                className="py-2 px-2 rounded-lg mx-1 my-2 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
+                className="px-2 py-2 mx-1 my-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
                 placeholder="Available times"
               />
             </label>
@@ -85,7 +85,7 @@ const AddItem = () => {
                 name="picture"
                 onChange={handleChange}
                 value={values.picture}
-                className="py-2 px-2 rounded-lg mx-1 my-2 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
+                className="px-2 py-2 mx-1 my-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
                 placeholder="Upload picture"
               />
             </label>
@@ -104,4 +104,4 @@ const AddItem = () => {
   );
 };
 
-export default AddItem;
+export default AddDoctor;

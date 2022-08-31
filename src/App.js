@@ -6,13 +6,13 @@ import { ToastContainer } from 'react-toastify';
 import Home from './components/Home/Home';
 import BookAppointment from './components/BookAppointment/BookAppointment';
 import DoctorDetails from './components/DoctorDetails/DoctorDetails';
-import MyReservations from './components/MyReservations/MyReservations';
+import MyAppointments from './components/MyAppointments/MyAppointments';
 import LoginPage from './components/Authentication/LoginPage/LoginPage';
 import SignUpPage from './components/Authentication/SignUpPage/SignUpPage';
 import Navigation from './components/Navigation/Navigation';
 import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
-import AddItem from './components/AddItem/AddItem';
+import AddDoctor from './components/AddDoctor/AddDoctor';
 import DeleteItem from './components/DeleteItem/DeleteItem';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,7 +21,7 @@ function App() {
 
   const location = useLocation();
 
-  useEffect(() => {}, [location]);
+  useEffect(() => { }, [location]);
 
   if (storage.get('token')) {
     return (
@@ -31,13 +31,13 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
-          <Route path="/appointments" element={<MyReservations />} />
+          <Route path="/appointments" element={<MyAppointments />} />
           {role === 'admin' && (
-          <>
-            <Route path="/add-item" element={<AddItem />} />
-            <Route path="/delete-item" element={<DeleteItem />} />
-          </>
-          ) }
+            <>
+              <Route path="/doctors/new" element={<AddDoctor />} />
+              <Route path="/doctors/delete" element={<DeleteItem />} />
+            </>
+          )}
           <Route path="/book-appointment/:id" element={<BookAppointment />} />
           <Route path="/doctor/details/:name" element={<DoctorDetails />} />
         </Routes>
@@ -52,8 +52,8 @@ function App() {
         <Route path="*" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<SignUpPage />} />
-        <Route path="/add-item" element={<AddItem />} />
-        <Route path="/delete-item" element={<DeleteItem />} />
+        <Route path="/doctors/new" element={<AddDoctor />} />
+        <Route path="/doctors/delete" element={<DeleteItem />} />
       </Routes>
     </div>
   );

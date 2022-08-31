@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { getAllAppointmentsAsync, cancelAppointmentAsync } from '../../redux/appointments/appointmentsSlice';
 
-export default function MyReservations() {
+export default function MyAppointments() {
   const dispatch = useDispatch();
   const { appointments, error } = useSelector((state) => state.appointments);
   useEffect(() => {

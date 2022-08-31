@@ -1,5 +1,5 @@
 export const getAllAppointments = async (baseURL, token) => {
-  const response = await fetch(`${baseURL}/reservations`,
+  const response = await fetch(`${baseURL}/appointments`,
     {
       method: 'GET',
       headers: {
@@ -11,7 +11,7 @@ export const getAllAppointments = async (baseURL, token) => {
   return result; // [{ id: '...', name: '...', date: '...', duration: '...', total: '...' }]
 };
 export const scheduleAppointment = async (baseURL, token, date, duration, doctorId) => {
-  const response = await fetch(`${baseURL}/reservations`,
+  const response = await fetch(`${baseURL}/appointments`,
     {
       method: 'POST',
       body: JSON.stringify({
@@ -29,7 +29,7 @@ export const scheduleAppointment = async (baseURL, token, date, duration, doctor
 };
 
 export const cancelAppointment = async (baseURL, token, id) => {
-  const response = await fetch(`${baseURL}/reservations/${id}`,
+  const response = await fetch(`${baseURL}/appointments/${id}`,
     {
       method: 'DELETE',
       headers: {

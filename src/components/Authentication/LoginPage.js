@@ -61,7 +61,7 @@ export default function LoginPage() {
               disabled={isLoading
                 || (values.password.length < 1 || values.username.length < 1)}
               type="submit"
-              className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md disabled:opacity-50 bg-lime-800 focus:ring-lime-400 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 enabled:disabled:hover:bg-lime-500"
+              className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md disabled:opacity-50 bg-lime-800 enabled:hover:bg-lime-500"
             >
               Login
             </button>

@@ -46,6 +46,9 @@ export default function DeleteDoctor() {
               <th className="p-3 text-sm font-semibold text-left bg-thead whitespace-nowrap text-textHeading">
                 Time
               </th>
+              <th className="p-3 text-sm font-semibold text-left bg-thead whitespace-nowrap text-textHeading">
+                Action
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -60,16 +63,8 @@ export default function DeleteDoctor() {
                 <td className="px-3 py-4 text-sm font-normal text-left break-words bg-light text-textColor">
                   {doctor.available_times}
                 </td>
-                <td className="px-3 py-4 text-sm font-normal text-left break-words bg-light text-textColor">
-                  <button
-                    type="submit"
-                    id={doctor.id}
-                    onClick={handleDelete}
-                    className="px-4 py-2 text-base font-medium text-center text-white transition duration-200 ease-in rounded-lg shadow-md disabled:opacity-50 bg-lime-800 focus:ring-lime-400 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 enabled:disabled:hover:bg-lime-500"
-                  >
-                    Delete
-
-                  </button>
+                <td className="px-3 py-4 text-sm font-semibold text-left text-red-500 underline break-words bg-light">
+                  <button type="button" onClick={handleDelete} id={doctor.id}>Delete</button>
                 </td>
               </tr>
             ))}

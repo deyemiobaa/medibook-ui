@@ -1,67 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {
-  FaTwitter, FaGithub, FaInstagram, FaFacebook, FaReact, FaHeart, FaLinkedin,
-} from 'react-icons/fa';
-import { SiRubyonrails } from 'react-icons/si';
-import { BsPlus } from 'react-icons/bs'; import logo from '../../assets/logo.png';
+import { icons, technologies } from '../assets/data';
+import logo from '../assets/logo.png';
 import storage from '../app/localStorage';
 
 export default function Navigation({ urls }) {
   const [open, setOpen] = useState(false);
   const role = storage.get('role');
-
-  const icons = [
-    {
-      title: 'LinkedIn',
-      url: 'https://www.linkedin.com',
-      icon: <FaLinkedin />,
-    },
-    {
-      title: 'Twitter',
-      url: 'https://twitter.com',
-      icon: <FaTwitter />,
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com/orgs/medi-book/repositories',
-      icon: <FaGithub />,
-    },
-    {
-      title: 'Instagram',
-      url: 'https://instagram.com',
-      icon: <FaInstagram />,
-    },
-    {
-      title: 'Facebook',
-      url: 'https://facebook.com',
-      icon: <FaFacebook />,
-    },
-  ];
-
-  const technologies = [
-    {
-      title: 'Built with Love',
-      icon: <FaHeart />,
-    },
-    {
-      title: 'Plus',
-      icon: <BsPlus />,
-    },
-    {
-      title: 'Built with React',
-      icon: <FaReact />,
-    },
-    {
-      title: 'Plus+',
-      icon: <BsPlus />,
-    },
-    {
-      title: 'Built with Rails',
-      icon: <SiRubyonrails />,
-    },
-  ];
 
   return (
     <div className="navigation sm:w-[15%] bg-white flex justify-between items-center sm:flex-col sm:border-r sm:border-r-gray-400 border-b border-b-gray-400 fixed top-0 left-0 sm:bottom-0 px-3 sm:pb-10 sm:px-0">
@@ -71,37 +17,51 @@ export default function Navigation({ urls }) {
       <button type="button" onClick={() => setOpen(!open)} className="text-3xl cursor-pointer sm:hidden">
         <ion-icon name={open ? 'close-outline' : 'menu-outline'} />
       </button>
-      <div className={`open ${open ? 'fixed mt-56 z-20 left-0 right-0' : 'hidden'}`}>
-        <div className="flex flex-col pl-3 bg-white navLinks first:border-t last:border-b">
+      <div className={`open ${open ? 'fixed top-16 z-20 left-0 right-0' : 'hidden'}`}>
+        <div className="flex flex-col pl-3 bg-white navLinks first:border-t last:border-b mobile-nav-container">
           {urls.map(({ path, name }) => (
-            <NavLink to={path} className="py-2 mb-2 text-xl font-medium duration-300 ease-in sm:text-base" key={name} style={{ background: 'white', color: 'black' }}>{name}</NavLink>
+            <NavLink to={path} className="py-2 mb-2 text-sm font-medium" key={name} style={{ background: 'white', color: 'black' }}>{name}</NavLink>
           ))}
+          {role === 'admin' && (
+            <>
+              <NavLink
+                to="/doctors/new"
+                className="py-2 mb-2 text-sm font-medium"
+              >
+                Add Doctor
+              </NavLink>
+              <NavLink
+                to="doctors/delete"
+                className="py-2 mb-2 text-sm font-medium"
+              >
+                Remove Doctor
+              </NavLink>
+            </>
+          )}
         </div>
       </div>
-      <div className="hidden w-full navLinks sm:flex sm:flex-col">
+      <div className="hidden w-full text-sm navLinks sm:flex sm:flex-col desktop-nav-container">
+        {urls.map(({ path, name }) => (
+          <NavLink to={path} className="link-el hover:bg-lime-400 hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10" key={name}>{name}</NavLink>
+        ))}
         {role === 'admin' && (
           <>
             <NavLink
               to="/doctors/new"
-              className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
+              className="link-el hover:bg-lime-400 hover:text-[#fff]
            ease-in duration-300 font-medium mb-2 p-3 pl-10"
             >
               Add Doctor
-
             </NavLink>
             <NavLink
               to="doctors/delete"
-              className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
+              className="link-el hover:bg-lime-400  hover:text-[#fff]
            ease-in duration-300 font-medium mb-2 p-3 pl-10"
             >
               Remove Doctor
-
             </NavLink>
           </>
         )}
-        {urls.map(({ path, name }) => (
-          <NavLink to={path} className="link-el hover:bg-lime-400 text-base hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10" key={name}>{name}</NavLink>
-        ))}
       </div>
       <div className="hidden sm:block">
         <div className="flex gap-4 p-2">

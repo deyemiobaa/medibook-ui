@@ -11,7 +11,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="px-5 py-24 text-gray-600 sm:py-16 sm:w-[85%]">
+    <section className="px-5 py-24 text-gray-600 sm:py-16 sm:w-[85%] w-full min-h-screen">
       <div className="flex flex-col items-center w-full mb-20 text-center">
         <h1 className="mb-4 text-2xl font-black text-gray-900 title-font">
           Welcome to Medi Book

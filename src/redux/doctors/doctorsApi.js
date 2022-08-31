@@ -20,11 +20,13 @@ export const postDoctor = async (baseURL, name, specialization, hourly, availabl
     {
       method: 'POST',
       body: JSON.stringify({
-        name,
-        specialization,
-        hourly_rate: hourly,
-        available_times: available,
-        picture,
+        doctor: {
+          name,
+          specialization,
+          hourly_rate: hourly,
+          available_times: available,
+          picture,
+        },
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -39,9 +41,6 @@ export const deleteDoctor = async (baseURL, id) => {
   const response = await fetch(`${baseURL}/doctors/${id}`,
     {
       method: 'DELETE',
-      body: JSON.stringify({
-        id,
-      }),
       headers: {
         'Content-Type': 'application/json',
         Authorization: `${token}`,

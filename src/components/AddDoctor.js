@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { postDoctorAsync } from '../redux/doctors/doctorsSlice';
+import Input from './Form/Input';
+import Button from './Form/Button';
+import FormScaffold from './Form/FormScaffold';
 import useForm from './Form/useForm';
 
 export default function AddDoctor() {
@@ -27,87 +30,13 @@ export default function AddDoctor() {
       });
   };
   return (
-    <div className="w-full px-5 py-24 text-gray-600 justify-self-center sm:w-[85%] bg-lime-400 sm:justify-self-end sm:py-16">
-      <div className="max-w-xl m-auto bg-white bg-opacity-25 rounded shadow-xl">
-        <form className="p-10" onSubmit={handleSubmit}>
-          <p className="mb-8 text-2xl font-medium text-center text-gray-700">
-            Add New Doctor
-          </p>
-          <div className="mb-2">
-            <label htmlFor="docname" className="font-medium">
-              Name:
-              <input
-                type="text"
-                name="name"
-                onChange={handleChange}
-                value={values.name}
-                className="flex-1 w-64 px-4 py-2 mx-16 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
-                placeholder="Name"
-              />
-            </label>
-          </div>
-          <div className="mb-2">
-            <label htmlFor="specilization" className="font-medium">
-              Specialization:
-              <input
-                type="text"
-                name="specialization"
-                onChange={handleChange}
-                value={values.specialization}
-                className="flex-1 w-64 px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
-                placeholder="Specialization"
-              />
-            </label>
-          </div>
-          <div className="mb-2">
-            <label htmlFor="hours" className="font-medium">
-              Hourly Rate:
-              <input
-                type="number"
-                name="hourly"
-                onChange={handleChange}
-                value={values.hourly}
-                className="flex-1 w-64 px-4 py-2 mx-4 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
-                placeholder="Hours"
-              />
-            </label>
-          </div>
-          <div className="mb-2">
-            <label htmlFor="from" className="font-medium">
-              available times:
-              <input
-                type="text"
-                name="available"
-                onChange={handleChange}
-                value={values.available}
-                className="px-2 py-2 mx-1 my-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
-                placeholder="Available times"
-              />
-            </label>
-          </div>
-          <div className="mb-2">
-            <label htmlFor="from" className="font-medium">
-              Upload picture:
-              <input
-                type="text"
-                name="picture"
-                onChange={handleChange}
-                value={values.picture}
-                className="px-2 py-2 mx-1 my-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent"
-                placeholder="Upload picture"
-              />
-            </label>
-          </div>
-          <div className="flex items-center justify-center mt-4">
-            <button
-              type="submit"
-              className="w-64 px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md disabled:opacity-50 bg-lime-800 focus:ring-lime-400 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 enabled:disabled:hover:bg-lime-500"
-            >
-              Add
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <FormScaffold title="Add New Doctor" onSubmit={handleSubmit}>
+      <Input label="Name" type="text" name="name" value={values.name} onChange={handleChange} placeholder="Dr Doo Little" />
+      <Input label="Specialization" type="text" name="specialization" value={values.specialization} onChange={handleChange} placeholder="Vetinary" />
+      <Input label="Available times" type="text" name="available" value={values.available} onChange={handleChange} placeholder="Monday - Friday" />
+      <Input label="Hourly rate" type="number" name="hourly" value={values.hourly} onChange={handleChange} placeholder="$100" />
+      <Input label="Paste picture" type="text" name="picture" value={values.picture} onChange={handleChange} placeholder="https://mypicture.png" />
+      <Button text="Add" disabled={false} />
+    </FormScaffold>
   );
 }

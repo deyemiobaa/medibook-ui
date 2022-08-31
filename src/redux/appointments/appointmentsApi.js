@@ -15,9 +15,11 @@ export const scheduleAppointment = async (baseURL, token, date, duration, doctor
     {
       method: 'POST',
       body: JSON.stringify({
-        date,
-        duration,
-        doctor_id: doctorId,
+        appointment: {
+          date,
+          duration,
+          doctor_id: doctorId,
+        },
       }),
       headers: {
         'Content-Type': 'application/json',

@@ -3,8 +3,10 @@ export const signin = async (baseURL, username, password) => {
     {
       method: 'POST',
       body: JSON.stringify({
-        username,
-        password,
+        user: {
+          username,
+          password,
+        },
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -19,9 +21,11 @@ export const signup = async (baseURL, username, password, confirmation) => {
     {
       method: 'POST',
       body: JSON.stringify({
-        username,
-        password,
-        password_confirmation: confirmation,
+        user: {
+          username,
+          password,
+          password_confirmation: confirmation,
+        },
       }),
       headers: {
         'Content-Type': 'application/json',

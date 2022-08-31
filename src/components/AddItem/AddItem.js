@@ -2,7 +2,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { postDoctors } from '../../redux/doctors/doctorsSlice';
-import useForm from '../Authentication/useForm';
+import useForm from '../useForm';
 
 const AddItem = () => {
   const dispatch = useDispatch();

@@ -9,7 +9,7 @@ export const authenticatedNav = [
   },
   {
     name: 'Book Appointment',
-    path: '/book-appointment',
+    path: '/book-appointment/new',
   },
 ];
 

@@ -1,7 +1,20 @@
-import React from 'react';
-import { appointments } from '../../assets/data';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchDoctors, deleteDoctors } from '../../redux/doctors/doctorsSlice';
 
 export default function DeleteItem() {
+  const { doctors } = useSelector((state) => state.doctors);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchDoctors());
+  }, [dispatch]);
+
+  const handleDelete = (e) => {
+    const { id } = e.target;
+    dispatch(deleteDoctors(id));
+    window.location.reload();
+  };
   return (
     <section className="w-full px-5 py-24 sm:w-[85%] sm:py-16 justify-self-center sm:justify-self-end">
       <div className="flex flex-col items-center w-full mb-10 text-center">
@@ -20,7 +33,7 @@ export default function DeleteItem() {
                 Doctor Name
               </th>
               <th className="p-3 text-sm font-semibold text-left bg-thead whitespace-nowrap text-textHeading">
-                Date
+                specialization
               </th>
               <th className="p-3 text-sm font-semibold text-left bg-thead whitespace-nowrap text-textHeading">
                 Time
@@ -28,20 +41,22 @@ export default function DeleteItem() {
             </tr>
           </thead>
           <tbody>
-            {appointments.map((appointment) => (
-              <tr key={appointment.id}>
+            {doctors.map((doctor) => (
+              <tr key={doctor.id}>
                 <td className="px-3 py-4 text-sm font-normal text-left break-words bg-light text-textColor">
-                  {appointment.name}
+                  {doctor.name}
                 </td>
                 <td className="px-3 py-4 text-sm font-normal text-left break-words bg-light text-textColor">
-                  {appointment.date}
+                  {doctor.specialization}
                 </td>
                 <td className="px-3 py-4 text-sm font-normal text-left break-words bg-light text-textColor">
-                  {appointment.time}
+                  {doctor.available_times}
                 </td>
                 <td className="px-3 py-4 text-sm font-normal text-left break-words bg-light text-textColor">
                   <button
                     type="submit"
+                    id={doctor.id}
+                    onClick={handleDelete}
                     className="px-4 py-2 text-base font-medium text-center text-white transition duration-200 ease-in rounded-lg shadow-md disabled:opacity-50 bg-lime-800 focus:ring-lime-400 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 enabled:disabled:hover:bg-lime-500"
                   >
                     Delete

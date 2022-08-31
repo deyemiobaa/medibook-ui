@@ -1,9 +1,9 @@
 import React from 'react';
-import { appointments } from '../../assets/data';
+import { appointments } from '../../assests/data';
 
 export default function MyReservations() {
   return (
-    <section className="w-full px-5 py-24 sm:w-[85%] sm:py-16 justify-self-center sm:justify-self-end">
+    <section className="w-full px-5 py-24 sm:w-4/5 sm:py-16 justify-self-center sm:justify-self-end">
       <div className="flex flex-col items-center w-full mb-10 text-center">
         <h1 className="mb-4 text-2xl font-black text-gray-900 title-font">
           Appointments

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BookAppointment = () => (
-  <section className="w-full justify-self-center sm:w-[85%] bg-lime-400 sm:justify-self-end">
+  <section className="w-full justify-self-center sm:w-4/5 bg-lime-400 sm:justify-self-end">
     <div className="container px-5 py-24 mx-auto">
       <div className="mb-20 text-center">
         <h1 className="mb-4 text-2xl font-bold text-center text-black sm:text-3xl title-font">

@@ -26,7 +26,11 @@ export const usersSlice = createSlice({
   name: 'users',
   initialState: {
     isLoading: false,
+    isError: false,
     message: '',
+    token: null,
+    role: '',
+    name: '',
   },
   reducers: {},
   extraReducers: {
@@ -34,23 +38,27 @@ export const usersSlice = createSlice({
       state.isLoading = true;
     },
     [signinAsync.fulfilled]: (state, action) => {
-      state.isLoading = false;
       const { token, role, name } = action.payload;
+      state.token = token;
+      state.role = role;
+      state.name = name;
       storage.save({ token, role, name });
     },
     [signinAsync.rejected]: (state, action) => {
-      state.isLoading = false;
-      state.message = action.payload.error;
+      state.isError = true;
+      state.errorMessage = action.payload.error;
     },
     [signupAsync.pending]: (state) => {
       state.isLoading = true;
     },
     [signupAsync.fulfilled]: (state, action) => {
       state.isLoading = false;
+      state.isError = false;
       state.message = action.payload.message;
     },
     [signupAsync.rejected]: (state, action) => {
       state.isLoading = false;
+      state.isError = true;
       state.message = action.payload.status;
     },
   },

@@ -16,7 +16,7 @@ import AddItem from './components/AddItem/AddItem';
 import DeleteItem from './components/DeleteItem/DeleteItem';
 
 function App() {
-  const role = storage.get('role');
+  // const role = storage.get('role');
 
   const location = useLocation();
 
@@ -32,12 +32,14 @@ function App() {
           <Route path="/appointments" element={<MyReservations />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/doctor/details/:name" element={<DoctorDetails />} />
-          {role === 'admin' && (
+          <Route path="/add-item" element={<AddItem />} />
+          <Route path="/delete-item" element={<DeleteItem />} />
+          {/* {role === 'admin' && (
           <>
             <Route path="/add-item" element={<AddItem />} />
             <Route path="/delete-item" element={<DeleteItem />} />
           </>
-          ) }
+          ) } */}
         </Routes>
       </div>
     );

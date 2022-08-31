@@ -1,19 +1,27 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors, deleteDoctors } from '../redux/doctors/doctorsSlice';
+import { toast } from 'react-toastify';
+import { getDoctorsAsync, deleteDoctorAsync } from '../redux/doctors/doctorsSlice';
 
 export default function DeleteDoctor() {
-  const { doctors } = useSelector((state) => state.doctors);
+  const { doctors, message } = useSelector((state) => state.doctors);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDoctors());
+    dispatch(getDoctorsAsync());
   }, [dispatch]);
 
   const handleDelete = (e) => {
     const { id } = e.target;
-    dispatch(deleteDoctors(id));
-    window.location.reload();
+    dispatch(deleteDoctorAsync(id))
+      .unwrap()
+      .then(() => {
+        dispatch(getDoctorsAsync());
+        toast.success(message);
+      })
+      .catch(() => {
+        toast.error(message);
+      });
   };
   return (
     <section className="w-full px-5 py-24 sm:w-[85%] sm:py-16 justify-self-center sm:justify-self-end">

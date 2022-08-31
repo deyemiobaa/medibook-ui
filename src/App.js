@@ -26,7 +26,7 @@ function App() {
   if (storage.get('token')) {
     return (
       <div className="grid justify-items-end">
-        <ToastContainer autoClose={2500} />
+        <ToastContainer autoClose={3000} />
         <Navigation urls={authenticatedNav} />
         <Routes>
           <Route path="*" element={<Home />} />
@@ -46,7 +46,7 @@ function App() {
   }
   return (
     <div className="grid justify-items-end">
-      <ToastContainer autoClose={2500} />
+      <ToastContainer autoClose={3000} />
       <Navigation urls={unauthenticatedNav} />
       <Routes>
         <Route path="*" element={<Navigate to="/login" replace />} />

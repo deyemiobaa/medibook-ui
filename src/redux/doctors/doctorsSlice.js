@@ -1,14 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import getDoctors, { postDoctor, deleteDoctor } from './doctorsApi';
+import { getDoctors, postDoctor, deleteDoctor } from './doctorsApi';
 
 const baseURL = process.env.REACT_APP_BASE_URL;
 
-export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
+export const getDoctorsAsync = createAsyncThunk('doctors/getDoctorsAsync', async () => {
   const doctors = await getDoctors(baseURL);
   return doctors;
 });
 
-export const postDoctors = createAsyncThunk('doctors/post', async (args) => {
+export const postDoctorAsync = createAsyncThunk('doctors/post', async (args) => {
   const {
     name, specialization, hourly, available, picture,
   } = args;
@@ -16,7 +16,7 @@ export const postDoctors = createAsyncThunk('doctors/post', async (args) => {
   return response;
 });
 
-export const deleteDoctors = createAsyncThunk('doctors/delete', async (id) => {
+export const deleteDoctorAsync = createAsyncThunk('doctors/delete', async (id) => {
   const res = await deleteDoctor(baseURL, id);
   return res;
 });
@@ -24,32 +24,28 @@ export const deleteDoctors = createAsyncThunk('doctors/delete', async (id) => {
 const initialState = {
   loading: false,
   doctors: [],
-  error: '',
+  message: '',
 };
 
 const doctorsSlice = createSlice({
   name: 'doctors',
   initialState,
   extraReducers: {
-    [fetchDoctors.pending]: (state) => {
-      state.loading = true;
-    },
-    [fetchDoctors.fulfilled]: (state, action) => {
-      state.loading = false;
-      state.doctors = action.payload;
-      state.error = '';
-    },
-    [fetchDoctors.rejected]: (state, action) => {
-      state.loading = false;
-      state.doctors = [];
-      state.error = action.error.message;
-    },
-    [postDoctors.fulfilled]: (state, action) => {
+    [getDoctorsAsync.fulfilled]: (state, action) => {
       state.loading = false;
       state.doctors = action.payload;
     },
-    [deleteDoctor.fulfilled]: (state) => {
+    [getDoctorsAsync.rejected]: (state, action) => {
       state.loading = false;
+      state.message = action.payload.message;
+    },
+    [postDoctorAsync.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.message = action.payload.message;
+    },
+    [deleteDoctorAsync.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.message = action.payload.message;
     },
   },
 });

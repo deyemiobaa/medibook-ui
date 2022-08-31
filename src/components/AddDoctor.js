@@ -1,10 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { postDoctors } from '../redux/doctors/doctorsSlice';
+import { toast } from 'react-toastify';
+import { postDoctorAsync } from '../redux/doctors/doctorsSlice';
 import useForm from './Form/useForm';
 
 export default function AddDoctor() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const { values, handleChange } = useForm({
     name: '',
     specialization: '',
@@ -15,7 +19,12 @@ export default function AddDoctor() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(postDoctors(values));
+    dispatch(postDoctorAsync(values))
+      .unwrap()
+      .then(() => {
+        navigate('/');
+        toast.success('Doctor profile added successfully');
+      });
   };
   return (
     <div className="w-full px-5 py-24 text-gray-600 justify-self-center sm:w-[85%] bg-lime-400 sm:justify-self-end sm:py-16">

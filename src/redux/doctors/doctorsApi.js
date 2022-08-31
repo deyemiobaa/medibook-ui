@@ -2,7 +2,7 @@ import storage from '../../app/localStorage';
 
 const token = storage.get('token');
 
-const getDoctors = async (baseURL) => {
+export const getDoctors = async (baseURL) => {
   const response = await fetch(`${baseURL}/doctors`,
     {
       method: 'GET',
@@ -50,4 +50,3 @@ export const deleteDoctor = async (baseURL, id) => {
   const result = await response.json();
   return result;
 };
-export default getDoctors;

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { scheduleAppointmentAsync } from '../redux/appointments/appointmentsSlice';
-import { fetchDoctors } from '../redux/doctors/doctorsSlice';
+import { getDoctorsAsync } from '../redux/doctors/doctorsSlice';
 import useForm from './Form/useForm';
 
 export default function BookAppointment() {
@@ -19,7 +19,7 @@ export default function BookAppointment() {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchDoctors());
+    dispatch(getDoctorsAsync());
   }, []);
 
   const navigate = useNavigate();

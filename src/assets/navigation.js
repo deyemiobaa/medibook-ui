@@ -22,4 +22,12 @@ export const unauthenticatedNav = [
     name: 'Sign up',
     path: '/register',
   },
+  {
+    name: 'Add Item',
+    path: '/add-item',
+  },
+  {
+    name: 'Delete Item',
+    path: '/delete-item',
+  },
 ];

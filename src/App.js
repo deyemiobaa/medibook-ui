@@ -12,13 +12,16 @@ import SignUpPage from './components/Authentication/SignUpPage/SignUpPage';
 import Navigation from './components/Navigation/Navigation';
 import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
+import AddItem from './components/AddItem/AddItem';
+import DeleteItem from './components/DeleteItem/DeleteItem';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const role = storage.get('role');
+
   const location = useLocation();
 
-  useEffect(() => {
-  }, [location]);
+  useEffect(() => {}, [location]);
 
   if (storage.get('token')) {
     return (
@@ -29,6 +32,12 @@ function App() {
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/appointments" element={<MyReservations />} />
+          {role === 'admin' && (
+          <>
+            <Route path="/add-item" element={<AddItem />} />
+            <Route path="/delete-item" element={<DeleteItem />} />
+          </>
+          ) }
           <Route path="/book-appointment/:id" element={<BookAppointment />} />
           <Route path="/doctor/details/:name" element={<DoctorDetails />} />
         </Routes>
@@ -43,6 +52,8 @@ function App() {
         <Route path="*" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<SignUpPage />} />
+        <Route path="/add-item" element={<AddItem />} />
+        <Route path="/delete-item" element={<DeleteItem />} />
       </Routes>
     </div>
   );

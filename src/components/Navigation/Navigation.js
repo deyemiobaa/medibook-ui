@@ -6,9 +6,11 @@ import {
 } from 'react-icons/fa';
 import { SiRubyonrails } from 'react-icons/si';
 import { BsPlus } from 'react-icons/bs'; import logo from '../../assets/logo.png';
+import storage from '../../app/localStorage';
 
 export default function Navigation({ urls }) {
   const [open, setOpen] = useState(false);
+  const role = storage.get('role');
 
   const icons = [
     {
@@ -77,6 +79,26 @@ export default function Navigation({ urls }) {
         </div>
       </div>
       <div className="hidden w-full navLinks sm:flex sm:flex-col">
+        {role === 'admin' && (
+        <>
+          <NavLink
+            to="/add-item"
+            className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
+           ease-in duration-300 font-medium mb-2 p-3 pl-10"
+          >
+            Add Item
+
+          </NavLink>
+          <NavLink
+            to="delete-item"
+            className="link-el hover:bg-lime-400 text-base hover:text-[#fff]
+           ease-in duration-300 font-medium mb-2 p-3 pl-10"
+          >
+            Delete Item
+
+          </NavLink>
+        </>
+        )}
         {urls.map(({ path, name }) => (
           <NavLink to={path} className="link-el hover:bg-lime-400 text-base hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10" key={name}>{name}</NavLink>
         ))}

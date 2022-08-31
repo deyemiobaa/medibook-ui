@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { scheduleAppointmentAsync } from '../../redux/appointments/appointmentsSlice';
-import useForm from '../useForm';
-import doctorData from '../../assets/data';
+import { scheduleAppointmentAsync } from '../redux/appointments/appointmentsSlice';
+import { fetchDoctors } from '../redux/doctors/doctorsSlice';
+import useForm from './Form/useForm';
 
-const BookAppointment = () => {
+export default function BookAppointment() {
+  const { doctors } = useSelector((state) => state.doctors);
+
   const { id } = useParams();
   const { values, handleChange } = useForm({
     date: '',
     time: '',
     duration: '',
-    doctorId: id === 'new' ? null : id,
+    doctorId: id,
   });
 
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchDoctors());
+  }, []);
+
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,7 +61,7 @@ const BookAppointment = () => {
                   onChange={handleChange}
                 >
                   <option value="default">Select a doctor</option>
-                  {doctorData.map((doctor) => (
+                  {doctors.map((doctor) => (
                     <option key={doctor.id} value={doctor.id}>
                       {doctor.name}
                     </option>
@@ -104,6 +110,4 @@ const BookAppointment = () => {
       </div>
     </section>
   );
-};
-
-export default BookAppointment;
+}

@@ -3,17 +3,17 @@ import {
   Routes, Route, useLocation, Navigate,
 } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Home from './components/Home/Home';
-import BookAppointment from './components/BookAppointment/BookAppointment';
-import DoctorDetails from './components/DoctorDetails/DoctorDetails';
-import MyAppointments from './components/MyAppointments/MyAppointments';
-import LoginPage from './components/Authentication/LoginPage/LoginPage';
-import SignUpPage from './components/Authentication/SignUpPage/SignUpPage';
-import Navigation from './components/Navigation/Navigation';
+import Home from './components/Home';
+import BookAppointment from './components/BookAppointment';
+import DoctorDetails from './components/DoctorDetails';
+import MyAppointments from './components/MyAppointments';
+import LoginPage from './components/Authentication/LoginPage';
+import SignUpPage from './components/Authentication/SignUpPage';
+import Navigation from './components/Navigation';
 import { authenticatedNav, unauthenticatedNav } from './assets/navigation';
 import storage from './app/localStorage';
-import AddDoctor from './components/AddDoctor/AddDoctor';
-import DeleteItem from './components/DeleteItem/DeleteItem';
+import AddDoctor from './components/AddDoctor';
+import DeleteDoctor from './components/DeleteDoctor';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
           {role === 'admin' && (
             <>
               <Route path="/doctors/new" element={<AddDoctor />} />
-              <Route path="/doctors/delete" element={<DeleteItem />} />
+              <Route path="/doctors/delete" element={<DeleteDoctor />} />
             </>
           )}
           <Route path="/book-appointment/:id" element={<BookAppointment />} />
@@ -52,8 +52,6 @@ function App() {
         <Route path="*" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<SignUpPage />} />
-        <Route path="/doctors/new" element={<AddDoctor />} />
-        <Route path="/doctors/delete" element={<DeleteItem />} />
       </Routes>
     </div>
   );

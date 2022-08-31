@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import moment from 'moment';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { getAllAppointmentsAsync, cancelAppointmentAsync } from '../../redux/appointments/appointmentsSlice';
+import { getAllAppointmentsAsync, cancelAppointmentAsync } from '../redux/appointments/appointmentsSlice';
 
 export default function MyAppointments() {
   const dispatch = useDispatch();

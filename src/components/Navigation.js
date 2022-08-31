@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 import { SiRubyonrails } from 'react-icons/si';
 import { BsPlus } from 'react-icons/bs'; import logo from '../../assets/logo.png';
-import storage from '../../app/localStorage';
+import storage from '../app/localStorage';
 
 export default function Navigation({ urls }) {
   const [open, setOpen] = useState(false);

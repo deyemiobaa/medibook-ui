@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors } from '../../redux/doctors/doctorsSlice';
+import { fetchDoctors } from '../redux/doctors/doctorsSlice';
 
-const Home = () => {
+export default function Home() {
   const { doctors } = useSelector((state) => state.doctors);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -53,6 +53,4 @@ const Home = () => {
       </div>
     </section>
   );
-};
-
-export default Home;
+}

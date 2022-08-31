@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors } from '../../redux/doctors/doctorsSlice';
+import { fetchDoctors } from '../redux/doctors/doctorsSlice';
 
-const DoctorDetails = () => {
+export default function DoctorDetails() {
   const { name } = useParams();
   const dispatch = useDispatch();
 
@@ -60,6 +60,4 @@ const DoctorDetails = () => {
       </section>
     </div>
   );
-};
-
-export default DoctorDetails;
+}

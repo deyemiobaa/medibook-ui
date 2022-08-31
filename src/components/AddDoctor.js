@@ -1,10 +1,9 @@
-/* eslint-disable arrow-body-style */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { postDoctors } from '../../redux/doctors/doctorsSlice';
-import useForm from '../useForm';
+import { postDoctors } from '../redux/doctors/doctorsSlice';
+import useForm from './Form/useForm';
 
-const AddDoctor = () => {
+export default function AddDoctor() {
   const dispatch = useDispatch();
   const { values, handleChange } = useForm({
     name: '',
@@ -102,6 +101,4 @@ const AddDoctor = () => {
       </div>
     </div>
   );
-};
-
-export default AddDoctor;
+}

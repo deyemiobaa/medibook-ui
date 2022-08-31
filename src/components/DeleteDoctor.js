@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors, deleteDoctors } from '../../redux/doctors/doctorsSlice';
+import { fetchDoctors, deleteDoctors } from '../redux/doctors/doctorsSlice';
 
-export default function DeleteItem() {
+export default function DeleteDoctor() {
   const { doctors } = useSelector((state) => state.doctors);
   const dispatch = useDispatch();
 

@@ -4,7 +4,8 @@
 
 This project is our Final Capstone Project. It's a Doctor appointment scheduling app. Built with a React frontend and Rails backend. Users need to sign up or sign in to access the application.
 
-The credits of the website design goes to [Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign).
+
+<img src="src/assets/snapshot.png" alt="medi book homepage" />
 
 ## Live
 
@@ -33,23 +34,29 @@ $ git clone https://github.com/medi-book/medibook-ui.git
 
 Enter in root directory:
 
+```bash
 $ cd medibook-ui
+```
 
 Then run:
 
-- npm install
+```bash
+$ npm install
+```
 
-- npm start
+```bash
+$ npm start
+```
 
 ## Authors
 
-👤 \*_Ifza Rasool_
+👤 **Ifza Rasool**
 
 - GitHub: [@IfzaRasool](https://github.com/IfzaRasool)
 - Twitter [@IfzaRasool](https://twitter.com/Ifza15011319)
 - LinkedIn [@IfzaRasool](https://www.linkedin.com/in/ifza-arain/)
 
-👤 \*_Sodiq_
+👤 **Sodiq**
 
 - GitHub: [@deyemiobaa](https://github.com/deyemiobaa)
 - Twitter [@deyemiobaa](https://twitter.com/deyemiobaa)
@@ -77,7 +84,7 @@ Then run:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/medi-book/medibook-api/issues).
+Feel free to check the [issues page](https://github.com/medi-book/medibook-ui/issues).
 
 ## Show your support
 
@@ -85,9 +92,8 @@ Give a ⭐️ if you like this project! ❤️❤️❤️
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- The credits of the website design goes to [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign).
+- Photos: [istockphoto](https://www.istockphoto.com/)
 
 ## 📝 License
 

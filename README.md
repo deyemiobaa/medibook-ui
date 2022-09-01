@@ -1,13 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Book an appointment Front-end 
+# Book an appointment Front-end
 
-Our project for the final capstone project is based on an app for scheduling doctor appointments. We should follow the given design of the website, but we personalized the content.
-
-Additional description about the project and its features.
+The Project we are going to build is for Final Capstone Project. Doctor Appointment frontend is react frontend application for scheduling doctor appointments.Users need to sign up or sign in to access application.
 
 The credits of the website design goes to [Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign).
-
 
 ## Live
 
@@ -16,7 +13,6 @@ The credits of the website design goes to [Behance](https://www.behance.net/gall
 ## Back End
 
 [medibook-api](https://github.com/medi-book/medibook-api.git)
-
 
 ## Built With
 
@@ -41,19 +37,19 @@ $ cd medibook-ui
 
 Then run:
 
-  - npm install
+- npm install
 
-  - npm start
+- npm start
 
 ## Authors
 
-👤 **Ifza Rasool*
+👤 \*_Ifza Rasool_
 
 - GitHub: [@IfzaRasool](https://github.com/IfzaRasool)
 - Twitter [@IfzaRasool](https://twitter.com/Ifza15011319)
 - LinkedIn [@IfzaRasool](https://www.linkedin.com/in/ifza-arain/)
 
-👤 **Sodiq*
+👤 \*_Sodiq_
 
 - GitHub: [@deyemiobaa](https://github.com/deyemiobaa)
 - Twitter [@deyemiobaa](https://twitter.com/deyemiobaa)
@@ -61,14 +57,14 @@ Then run:
 
 👤 **Saningo Lekalantula**
 
-- GitHub:  [sainingo](https://github.com/sainingo)
+- GitHub: [sainingo](https://github.com/sainingo)
 - Twitter: [sainingo](https://twitter.com/saningoInn)
-- LinkedIn:[sainingo](https://www.linkedin.com/in/sainingo/) 
+- LinkedIn:[sainingo](https://www.linkedin.com/in/sainingo/)
 
-👤 **Anicet Murhula** 
+👤 **Anicet Murhula**
 
 - GitHub: [AnicetFantomas](https://github.com/sainingo)
-- Twitter: [AnicetFantomas](https://twitter.com/FantomasAnicet) 
+- Twitter: [AnicetFantomas](https://twitter.com/FantomasAnicet)
 - LinkedIn: [AnicetFantomas](https://www.linkedin.com/in/anicet-murhula-13a1b0220/)
 
 👤 **Oybek Kayumov**
@@ -77,7 +73,6 @@ Then run:
 - Twitter: [OybekKayumov](https://twitter.com/KayumovOybek)
 - LinkedIn: [OybekKayumov](https://www.linkedin.com/in/oybek-kayumov/)
 
-  
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -87,7 +82,6 @@ Feel free to check the [issues page](https://github.com/medi-book/medibook-api/i
 ## Show your support
 
 Give a ⭐️ if you like this project! ❤️❤️❤️
-
 
 ## Acknowledgments
 

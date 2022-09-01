@@ -48,28 +48,35 @@ Then run:
 
 ## Authors
 
+👤 **Ifza Rasool*
+
+- GitHub: [@IfzaRasool](https://github.com/IfzaRasool)
+- Twitter [@IfzaRasool](https://twitter.com/Ifza15011319)
+- LinkedIn [@IfzaRasool](https://www.linkedin.com/in/ifza-arain/)
+
 👤 **Sodiq*
 
 - GitHub: [@deyemiobaa](https://github.com/deyemiobaa)
 - Twitter [@deyemiobaa](https://twitter.com/deyemiobaa)
 - LinkedIn [@deyemiobaa](https://www.linkedin.com/in/sodiqa/)
 
-👤 **Saningo**
+👤 **Saningo Lekalantula**
 
-- GitHub: [Yishak ,Wes-Isaac](https://github.com/Wes-Isaac)
-- LinkedIn: [@Yishak](https://www.linkedin.com/in/yishak-wesego-b404851a7/) 
+- GitHub:  [sainingo](https://github.com/sainingo)
+- Twitter: [sainingo](https://twitter.com/saningoInn)
+- LinkedIn:[sainingo](https://www.linkedin.com/in/sainingo/) 
 
 👤 **Anicet Murhula** 
 
-- GitHub: [AnicetFantomas](https://github.com/AnicetFantomas)
+- GitHub: [AnicetFantomas](https://github.com/sainingo)
 - Twitter: [AnicetFantomas](https://twitter.com/FantomasAnicet) 
 - LinkedIn: [AnicetFantomas](https://www.linkedin.com/in/anicet-murhula-13a1b0220/)
 
-👤 **Shahier Nashaat**
+👤 **Oybek Kayumov**
 
-- GitHub: [@githubhandle](https://github.com/ShahierNashaat)
-- Twitter: [@twitterhandle](https://twitter.com/ShahierN)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shahier-nashaat-73519313a/)
+- GitHub: [OybekKayumov](https://github.com/OybekKayumov)
+- Twitter: [OybekKayumov](https://twitter.com/KayumovOybek)
+- LinkedIn: [OybekKayumov](https://www.linkedin.com/in/oybek-kayumov/)
 
   
 ## 🤝 Contributing
@@ -91,4 +98,4 @@ Give a ⭐️ if you like this project! ❤️❤️❤️
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/medi-book/medibook-ui/blob/dev/LICENSE) licensed.

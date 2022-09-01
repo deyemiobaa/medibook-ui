@@ -12,7 +12,7 @@ export default function Navigation({ urls }) {
   const logOutUser = () => {
     storage.clear();
     window.location.reload();
-  }
+  };
 
   return (
     <div className="navigation sm:w-[15%] bg-white flex justify-between items-center sm:flex-col sm:border-r sm:border-r-gray-400 border-b border-b-gray-400 fixed top-0 left-0 sm:bottom-0 px-3 sm:pb-10 sm:px-0">
@@ -27,7 +27,7 @@ export default function Navigation({ urls }) {
           {urls.map(({ path, name }) => (
             <NavLink to={path} className="py-2 mb-2 text-sm font-medium" key={name} style={{ background: 'white', color: 'black' }}>{name}</NavLink>
           ))}
-          {role && ( <NavLink to="/login" className="py-2 mb-2 text-sm font-medium" onClick={logOutUser}>Logout</NavLink>)}
+          {role && (<NavLink to="/login" className="py-2 mb-2 text-sm font-medium" onClick={logOutUser}>Logout</NavLink>)}
           {role === 'admin' && (
             <>
               <NavLink

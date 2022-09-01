@@ -17,12 +17,12 @@ export default function DoctorDetails() {
   return (
     <section className="px-5 py-24 text-gray-600 sm:py-16 sm:w-[85%] w-full min-h-screen">
       <h1 className="mb-4 text-2xl font-black text-gray-900 title-font">
-        Doctor Profile
+        {profile.name}
       </h1>
-      <div className="container flex flex-col mx-auto md:flex-row">
-        <div className="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0">
+      <div className="container flex flex-col gap-4 mx-auto md:flex-row">
+        <div className="mb-10 md:w-1/2 md:mb-0">
           <img
-            className="object-cover object-center rounded"
+            className="object-contain object-left max-h-[500px]"
             alt="hero"
             src={profile.picture}
           />
@@ -35,9 +35,9 @@ export default function DoctorDetails() {
             </button>
           </Link>
         </div>
-        <div className="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left">
+        <div className="md:w-1/2">
           <h2 className="mb-4 text-xl font-bold text-gray-900 sm:text-xl">
-            {profile.name}
+            Profile
           </h2>
 
           <div className="w-full">

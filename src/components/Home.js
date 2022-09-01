@@ -20,34 +20,32 @@ export default function Home() {
           This is the list of all available Doctors
         </p>
       </div>
-      <div className="flex flex-wrap m-4">
+      <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-3">
         {doctors.map((doctor) => (
-          <div key={doctor.id} className="p-4 lg:w-1/3 md:w-1/2">
-            <div className="flex flex-col items-center h-full text-center">
+          <div key={doctor.id} className="flex flex-col items-center h-full p-4 text-center">
+            <div className="">
               <img
-                alt="team"
+                alt={doctor.name}
                 className="object-cover object-center mb-4 rounded-full"
                 src={doctor.picture}
               />
-              <div className="w-full">
-                <h2 className="text-lg font-bold text-gray-900 title-font">
-                  {doctor.name}
-                </h2>
-                <h3 className="mb-3 text-gray-500">{doctor.specialization}</h3>
-                <p className="mb-4">{doctor.email}</p>
-                <span className="inline-flex">
-                  <Link to={`/doctor/details/${doctor.name}`}>
-                    <button
-                      type="button"
-                      className="px-4 py-2 font-bold text-white rounded-full bg-lime-400 hover:bg-lime-700"
-                    >
-                      View Doctor
-                    </button>
-                  </Link>
-                </span>
-              </div>
-
             </div>
+            <div className="w-full">
+              <h2 className="text-lg font-bold text-gray-900 title-font">
+                {doctor.name}
+              </h2>
+              <h3 className="mb-3 text-gray-500">{doctor.specialization}</h3>
+              <p className="mb-4">{doctor.email}</p>
+              <Link to={`/doctor/details/${doctor.name}`}>
+                <button
+                  type="button"
+                  className="px-4 py-2 font-bold text-white rounded-full bg-lime-400 hover:bg-lime-700"
+                >
+                  View Doctor
+                </button>
+              </Link>
+            </div>
+
           </div>
         ))}
       </div>

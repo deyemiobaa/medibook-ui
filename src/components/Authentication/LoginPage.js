@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { signinAsync } from '../../redux/users/usersSlice';
+import { getDoctorsAsync } from '../../redux/doctors/doctorsSlice';
 import useForm from '../Form/useForm';
 
 export default function LoginPage() {
@@ -17,6 +18,10 @@ export default function LoginPage() {
     isLoading, message,
   } = useSelector((state) => state.users);
 
+  useEffect(() => {
+    dispatch(getDoctorsAsync());
+  }, []);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(signinAsync(values))

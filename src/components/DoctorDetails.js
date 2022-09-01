@@ -22,14 +22,14 @@ export default function DoctorDetails() {
       <div className="container flex flex-col gap-4 mx-auto md:flex-row">
         <div className="mb-10 md:w-1/2 md:mb-0">
           <img
-            className="object-contain object-left max-h-[500px]"
+            className="object-contain object-center max-h-[500px] mb-2"
             alt="hero"
             src={profile.picture}
           />
           <Link to={`/book-appointment/${profile.id}`}>
             <button
               type="button"
-              className="inline-flex px-3 py-2 my-3 text-xs font-bold text-white border-0 rounded-full bg-lime-400 hover:bg-lime-700 focus:outline-none lg:text-lg"
+              className="px-3 py-2 mx-auto my-2 text-xs font-bold text-white border-0 rounded-full max-w-fit bg-lime-400 hover:bg-lime-700 focus:outline-none lg:text-lg"
             >
               Book Appointment
             </button>

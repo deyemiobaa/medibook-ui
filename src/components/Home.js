@@ -25,7 +25,7 @@ export default function Home() {
           <div key={doctor.id} className="flex flex-col items-center h-full p-4 text-center">
             <img
               alt={doctor.name}
-              className="w-auto h-auto mb-4 rounded-full"
+              className="object-cover object-center mb-4"
               src={doctor.picture}
             />
             <div className="w-full">

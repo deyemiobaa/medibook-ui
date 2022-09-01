@@ -9,6 +9,11 @@ export default function Navigation({ urls }) {
   const [open, setOpen] = useState(false);
   const role = storage.get('role');
 
+  const logOutUser = () => {
+    storage.clear();
+    window.location.reload();
+  }
+
   return (
     <div className="navigation sm:w-[15%] bg-white flex justify-between items-center sm:flex-col sm:border-r sm:border-r-gray-400 border-b border-b-gray-400 fixed top-0 left-0 sm:bottom-0 px-3 sm:pb-10 sm:px-0">
       <div className="logo w-[20%] sm:w-[70%] p-[10px] sm:self-center">
@@ -22,6 +27,7 @@ export default function Navigation({ urls }) {
           {urls.map(({ path, name }) => (
             <NavLink to={path} className="py-2 mb-2 text-sm font-medium" key={name} style={{ background: 'white', color: 'black' }}>{name}</NavLink>
           ))}
+          {role && ( <NavLink to="/login" className="py-2 mb-2 text-sm font-medium" onClick={logOutUser}>Logout</NavLink>)}
           {role === 'admin' && (
             <>
               <NavLink
@@ -48,19 +54,26 @@ export default function Navigation({ urls }) {
           <>
             <NavLink
               to="/doctors/new"
-              className="link-el hover:bg-lime-400 hover:text-[#fff]
-           ease-in duration-300 font-medium mb-2 p-3 pl-10"
+              className="link-el hover:bg-lime-400 hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10"
             >
               Add Doctor
             </NavLink>
             <NavLink
               to="doctors/delete"
-              className="link-el hover:bg-lime-400  hover:text-[#fff]
-           ease-in duration-300 font-medium mb-2 p-3 pl-10"
+              className="link-el hover:bg-lime-400  hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10"
             >
               Remove Doctor
             </NavLink>
           </>
+        )}
+        {role && (
+          <NavLink
+            to="/login"
+            className="link-el hover:bg-lime-400 hover:text-[#fff] ease-in duration-300 font-medium mb-2 p-3 pl-10"
+            onClick={logOutUser}
+          >
+            Logout
+          </NavLink>
         )}
       </div>
       <div className="hidden sm:block">

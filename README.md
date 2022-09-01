@@ -45,6 +45,16 @@ $ npm install
 ```
 
 ```bash
+$ touch .env
+```
+
+```bash
+$ echo BASE_URL=http://localhost:3000 >> .env
+```
+
+Start the backend server: instructions on [this page](https://github.com/medi-book/medibook-api#setup). Then run:
+
+```bash
 $ npm start
 ```
 

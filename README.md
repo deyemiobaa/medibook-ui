@@ -2,7 +2,7 @@
 
 # Book an appointment Front-end
 
-The Project we are going to build is for Final Capstone Project. Doctor Appointment frontend is react frontend application for scheduling doctor appointments.Users need to sign up or sign in to access application.
+This project is our Final Capstone Project. It's a Doctor appointment scheduling app. Built with a React frontend and Rails backend. Users need to sign up or sign in to access the application.
 
 The credits of the website design goes to [Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign).
 

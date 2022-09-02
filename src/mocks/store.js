@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import userReducer from '../redux/users/usersSlice';
 import doctorsReducer from '../redux/doctors/doctorsSlice';
 import appointmentsReducer from '../redux/appointments/appointmentsSlice';
@@ -9,11 +9,11 @@ const rootReducer = combineReducers({
   users: userReducer,
   doctors: doctorsReducer,
   appointments: appointmentsReducer,
-})
+});
 
 export default function setupStore(preloadedState) {
   return configureStore({
     reducer: rootReducer,
-    preloadedState
-  })
+    preloadedState,
+  });
 }

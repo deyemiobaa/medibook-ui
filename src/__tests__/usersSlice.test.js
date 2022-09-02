@@ -3,6 +3,7 @@ import { usersSlice, signinAsync, signupAsync } from '../redux/users/usersSlice'
 const initialState = {
   isLoading: false,
   message: '',
+  token: '',
 };
 
 describe('usersSlice', () => {
@@ -14,6 +15,7 @@ describe('usersSlice', () => {
     expect(usersSlice.reducer(initialState, signinAsync.pending())).toEqual({
       isLoading: true,
       message: '',
+      token: '',
     });
   });
 
@@ -39,6 +41,7 @@ describe('usersSlice', () => {
     expect(usersSlice.reducer(initialState, signupAsync.pending())).toEqual({
       isLoading: true,
       message: '',
+      token: '',
     });
   });
 
@@ -54,6 +57,7 @@ describe('usersSlice', () => {
     )).toEqual({
       isLoading: false,
       message: 'message',
+      token: '',
     });
   });
 });

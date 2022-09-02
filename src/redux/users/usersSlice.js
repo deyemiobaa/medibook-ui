@@ -27,6 +27,7 @@ export const usersSlice = createSlice({
   initialState: {
     isLoading: false,
     message: '',
+    token: '',
   },
   reducers: {},
   extraReducers: {
@@ -37,6 +38,7 @@ export const usersSlice = createSlice({
       state.isLoading = false;
       const { token, role, name } = action.payload;
       storage.save({ token, role, name });
+      state.token = token;
     },
     [signinAsync.rejected]: (state, action) => {
       state.isLoading = false;

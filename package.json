@@ -47,6 +47,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.26.0",
+    "msw": "^0.46.1",
     "postcss": "^8.4.16",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",

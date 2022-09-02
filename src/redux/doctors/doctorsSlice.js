@@ -27,7 +27,7 @@ const initialState = {
   message: '',
 };
 
-const doctorsSlice = createSlice({
+export const doctorsSlice = createSlice({
   name: 'doctors',
   initialState,
   extraReducers: {

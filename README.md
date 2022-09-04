@@ -5,7 +5,7 @@
 This project is our Final Capstone Project. It's a Doctor appointment scheduling app. Built with a React frontend and Rails backend. Users need to sign up or sign in to access the application.
 
 
-<img src="src/assets/snapshot.png" alt="medi book homepage" />
+![image](https://user-images.githubusercontent.com/55185309/188284939-b3f53fae-93bd-426a-a3e7-2d12eb84b923.png)
 
 ## Live
 
